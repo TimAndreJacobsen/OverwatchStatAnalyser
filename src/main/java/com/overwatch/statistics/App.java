@@ -3,6 +3,7 @@ package com.overwatch.statistics;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.BorderPane;
@@ -21,23 +22,20 @@ public class App extends Application {
         launch(args);
     }
 
+
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Overwatch Stat tracker");
 
-
-
-
-
-
         // Layout
         BorderPane root = new BorderPane();
 
-        // Layout sub element
+        // initializing charts
+        LineChart<String, Number> chart = ui.run();
 
         // Adding all elements
         root.setLeft(addVBox());
-        root.setTop(addHBox());
+        root.setTop(addHBox(root, chart));
 
         primaryStage.setScene(new Scene(root, 900, 720));
         primaryStage.show();
@@ -62,11 +60,10 @@ public class App extends Application {
             VBox.setMargin(options[i], new Insets(0, 0, 0, 8));
             vbox.getChildren().add(options[i]);
         }
-
         return vbox;
     }
 
-    private HBox addHBox() {
+    private HBox addHBox(BorderPane root, LineChart chart) {
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(15, 12, 15, 12));
         hbox.setSpacing(10);
@@ -76,8 +73,8 @@ public class App extends Application {
         // Button 1
         Button btn = new Button();
         btn.setPrefSize(100, 20);
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(event -> System.out.println("Hello World!"));
+        btn.setText("Render chart");
+        btn.setOnAction(event -> root.setCenter(chart));
 
         // Button 2
         Button btnLoadStats = new Button();
@@ -89,4 +86,5 @@ public class App extends Application {
 
         return hbox;
     }
+
 }

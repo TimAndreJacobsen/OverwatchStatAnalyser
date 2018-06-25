@@ -7,9 +7,8 @@ public class GameRound {
     private boolean isWin;
     private String mapName;
     private String mapType;
-    //private Date date;
+    private String date;
     private String audioType;
-    private int beerCount;
 
     public GameRound() {
         this.skillRating = -1;
@@ -17,40 +16,32 @@ public class GameRound {
         this.isWin = false;
         this.mapName = "";
         this.mapType = "";
-        //this.date = today;
+        this.date = "";
         this.audioType = "";
-        this.beerCount = -1;
     }
 
+
     // Getters
-
-
     public int getSkillRating() {
         return skillRating;
     }
-
     public String getChampion() {
         return champion;
     }
-
     public boolean isWin() {
         return isWin;
     }
-
     public String getMapName() {
         return mapName;
     }
-
     public String getMapType() {
         return mapType;
     }
-
     public String getAudioType() {
         return audioType;
     }
-
-    public int getBeerCount() {
-        return beerCount;
+    public String getDate() {
+        return this.date;
     }
 
     // Setters
@@ -72,13 +63,16 @@ public class GameRound {
     public void setAudioType(String audioType) {
         this.audioType = audioType;
     }
-    public void setBeerCount(int beerCount) {
-        this.beerCount = beerCount;
+    public void setDate(String text) {
+        this.date = text;
     }
+
 //    public void setSkillRatingAfter(int skillRatingAfter) {
 //        this.skillRatingAfter = skillRatingAfter;
 //    }
 //    public void setSkillRatingDelta(int skillRatingDelta) {
 //        this.skillRatingDelta = skillRatingDelta;
 //    }
+
+
 }

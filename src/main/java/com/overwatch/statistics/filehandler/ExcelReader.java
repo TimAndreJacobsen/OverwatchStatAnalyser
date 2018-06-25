@@ -12,8 +12,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ExcelReader {
+
     private XSSFWorkbook workbook;
     private ArrayList<GameRound> gameRounds = new ArrayList<>();
+
+
+    // Getters
+    public ArrayList<GameRound> getGameRounds() {
+        return gameRounds;
+    }
+
 
     //REQUIRES: -
     //MODIFIES: this
@@ -45,7 +53,7 @@ public class ExcelReader {
 
                 switch (cell.getColumnIndex()) {
                     case 0:
-                        System.out.println("");
+                        System.out.println();
                         gameRounds.get(gameRoundIndex).setSkillRating(Integer.parseInt(text));
                         break;
                     case 1:
@@ -64,19 +72,14 @@ public class ExcelReader {
                         gameRounds.get(gameRoundIndex).setMapType(text);
                         break;
                     case 5:
-                        // gameRounds.get(row.getRowNum()).setDate(text);
+                        gameRounds.get(gameRoundIndex).setDate(text);
                     case 6:
                         gameRounds.get(gameRoundIndex).setAudioType(text);
-                        break;
-                    case 7:
-                        gameRounds.get(gameRoundIndex).setBeerCount(Integer.parseInt(text));
                         break;
                 }
             }
         }
     }
 
-    public ArrayList<GameRound> getGameRounds() {
-        return gameRounds;
-    }
+
 }
