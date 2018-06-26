@@ -1,6 +1,6 @@
 package com.overwatch.statistics.filehandler;
 
-import com.overwatch.statistics.gamesession.GameRound;
+import com.overwatch.statistics.gameround.GameRound;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
