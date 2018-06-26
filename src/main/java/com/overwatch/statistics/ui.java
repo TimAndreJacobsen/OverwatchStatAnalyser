@@ -23,14 +23,15 @@ public class ui {
         return chartRender;
     }
 
-    //TODO: Change to initialize
-    //TODO: Factor out lineChart initialization and creation.
-    protected LineChart run() {
+    protected void initialize() {
         initializeReader();
         excelReader.readWorkbook();
         gameRounds = excelReader.getGameRounds();
+    }
+
+    protected LineChart generateLineChart() {
         ChartRender chartRender = new ChartRender(gameRounds);
-        LineChart<String, Number> skillOverTime = chartRender.getSkillOverTime();
+        LineChart<String, Number> skillOverTime = chartRender.getSkillOverRoundsPlayed();
         return skillOverTime;
     }
 
