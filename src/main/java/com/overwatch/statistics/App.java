@@ -25,13 +25,14 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Overwatch Stat tracker");
+        primaryStage.setTitle("Overwatch Statistical analysis utility");
 
         // Layout
         BorderPane root = new BorderPane();
 
-        // initializing charts
-        LineChart<String, Number> chart = ui.run();
+        // initializing
+        ui.initialize();
+        LineChart chart = ui.generateLineChart();
 
         // Adding all elements
         root.setLeft(addVBox());
@@ -39,6 +40,30 @@ public class App extends Application {
 
         primaryStage.setScene(new Scene(root, 900, 720));
         primaryStage.show();
+    }
+
+    private HBox addHBox(BorderPane root, LineChart chart) {
+        HBox hbox = new HBox();
+        hbox.setPadding(new Insets(15, 12, 15, 12));
+        hbox.setSpacing(10);
+        hbox.setStyle("-fx-background-color: #336699;");
+
+
+        // Button 1
+        Button btn = new Button();
+        btn.setPrefSize(100, 20);
+        btn.setText("Render chart");
+        btn.setOnAction(event -> root.setCenter(chart));
+
+        // Button 2
+        Button btnLoadStats = new Button();
+        btnLoadStats.setPrefSize(100, 20);
+        btnLoadStats.setText("load stats");
+        btnLoadStats.setOnAction(event -> ui.initialize());
+
+        hbox.getChildren().addAll(btn, btnLoadStats);
+
+        return hbox;
     }
 
     private VBox addVBox() {
@@ -63,28 +88,5 @@ public class App extends Application {
         return vbox;
     }
 
-    private HBox addHBox(BorderPane root, LineChart chart) {
-        HBox hbox = new HBox();
-        hbox.setPadding(new Insets(15, 12, 15, 12));
-        hbox.setSpacing(10);
-        hbox.setStyle("-fx-background-color: #336699;");
-
-
-        // Button 1
-        Button btn = new Button();
-        btn.setPrefSize(100, 20);
-        btn.setText("Render chart");
-        btn.setOnAction(event -> root.setCenter(chart));
-
-        // Button 2
-        Button btnLoadStats = new Button();
-        btnLoadStats.setPrefSize(100, 20);
-        btnLoadStats.setText("load stats");
-        btnLoadStats.setOnAction(event -> ui.run());
-
-        hbox.getChildren().addAll(btn, btnLoadStats);
-
-        return hbox;
-    }
 
 }
