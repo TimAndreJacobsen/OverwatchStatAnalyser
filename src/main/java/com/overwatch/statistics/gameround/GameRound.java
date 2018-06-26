@@ -1,7 +1,8 @@
-package com.overwatch.statistics.gamesession;
+package com.overwatch.statistics.gameround;
 
 public class GameRound {
 
+    private int skillRatingChange;
     private int skillRating;
     private String champion;
     private boolean isWin;
@@ -18,6 +19,7 @@ public class GameRound {
         this.mapType = "";
         this.date = "";
         this.audioType = "";
+        this.skillRatingChange = 0;
     }
 
 
@@ -66,7 +68,9 @@ public class GameRound {
     public void setDate(String text) {
         this.date = text;
     }
-
+    public void setSkillRatingChange(int skillRatingChange) {
+        this.skillRatingChange = skillRatingChange;
+    }
 //    public void setSkillRatingAfter(int skillRatingAfter) {
 //        this.skillRatingAfter = skillRatingAfter;
 //    }
