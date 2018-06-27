@@ -107,7 +107,7 @@ public class ui {
 //        return barChart.getSupportWinRateByMap();
 //    }
 
-    private ExcelReader initializeReader() {
+    private void initializeReader() {
         System.out.println("initializing reader");
         try {
             excelReader = new ExcelReader();
