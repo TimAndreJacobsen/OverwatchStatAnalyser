@@ -23,7 +23,7 @@ public class ChartRender {
     }
 
     //TODO: Create overloaded methods to be able to generate charts for all possible values?
-    public LineChart<String, Number> getSkillOverTime() {
+    public LineChart<String, Number> getSkillOverRoundsPlayed() {
         // initializing and labeling the X and Y axis
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Time ->");
