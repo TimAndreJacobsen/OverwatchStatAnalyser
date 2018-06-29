@@ -20,35 +20,42 @@ public class ui {
     private Maps maps = new Maps();
     private ChampionRoster champions = new ChampionRoster();
 
-    // Getters
-    public ExcelReader getExcelReader() {
-        return excelReader;
-    }
-    public ChartRender getChartRender() {
-        return chartRender;
+
+
+    private void populateModels() {
+        maps.addMapsToList();
+        champions.setMaps(maps.getMaps());
+        champions.addChampionsToList();
     }
 
     protected void initialize() {
+        initializeReader();        // Initialize Reader
+        populateModels();        // Initialize Map and Champion types
+        readExcelWorkBook();        // Load data into excelReader
+        initLogic();        // Initialize logic & load game data
+        computeData();        // Calculate Champion data
+    }
 
-        // Initialize Reader
-        initializeReader();
+    private void computeData() {
+        logic.calculateSkillRatingChange();
+        logic.calculateTotalWinRate();
+    }
 
-        // Initialize Map and Champion types
-        maps.addMapsToList();
-        champions.addChampionsToList();
+    private void initLogic() {
+        logic = new Logic();
+        logic.setGameRounds(gameRounds);
+        logic.setMaps(maps.getMaps());
+        logic.setChampions(champions.getChampions());
+    }
 
-        // Load data into excelReader
+    private void readExcelWorkBook() {
+        // Load data
         excelReader.setMaps(maps.getMaps());
         excelReader.setChampions(champions.getChampions());
 
-        // Parse .xlsx file to List
+        // Parse .xlsx file to ArrayList
         excelReader.readWorkbook();
         gameRounds = excelReader.getGameRounds();
-
-        // Initialize logic & load game data & perform calculations needed
-        Logic logic = new Logic();
-        logic.setGameRounds(gameRounds);
-        logic.calculateSkillRatingChange();
     }
 
     protected LineChart generateLineChart() {
