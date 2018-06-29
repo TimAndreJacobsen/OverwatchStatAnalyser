@@ -55,13 +55,8 @@ public class App extends Application {
         btn.setText("Render chart");
         btn.setOnAction(event -> root.setCenter(chart));
 
-        // Button 2
-        Button btnLoadStats = new Button();
-        btnLoadStats.setPrefSize(100, 20);
-        btnLoadStats.setText("load stats");
-        btnLoadStats.setOnAction(event -> ui.initialize());
 
-        hbox.getChildren().addAll(btn, btnLoadStats);
+        hbox.getChildren().addAll(btn);
 
         return hbox;
     }
