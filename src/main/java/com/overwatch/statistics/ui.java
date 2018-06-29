@@ -3,6 +3,8 @@ package com.overwatch.statistics;
 import com.overwatch.statistics.filehandler.ExcelReader;
 import com.overwatch.statistics.gameround.GameRound;
 import com.overwatch.statistics.gameround.logic.Logic;
+import com.overwatch.statistics.gameround.model.ChampionRoster;
+import com.overwatch.statistics.gameround.model.Maps;
 import com.overwatch.statistics.graphics.ChartRender;
 import javafx.scene.chart.LineChart;
 
@@ -15,28 +17,35 @@ public class ui {
     private ChartRender chartRender;
     private Logic logic;
     private List<GameRound> gameRounds;
+    private Maps maps = new Maps();
+    private ChampionRoster champions = new ChampionRoster();
 
     // Getters
     public ExcelReader getExcelReader() {
         return excelReader;
     }
-
     public ChartRender getChartRender() {
         return chartRender;
     }
 
     protected void initialize() {
 
-        //Initialize Reader
+        // Initialize Reader
         initializeReader();
-        //Initialize Map and Champion types
-        excelReader.addMapsToList();
-        excelReader.addChampionsToList();
 
+        // Initialize Map and Champion types
+        maps.addMapsToList();
+        champions.addChampionsToList();
+
+        // Load data into excelReader
+        excelReader.setMaps(maps.getMaps());
+        excelReader.setChampions(champions.getChampions());
+
+        // Parse .xlsx file to List
         excelReader.readWorkbook();
         gameRounds = excelReader.getGameRounds();
 
-        // Initialize logic
+        // Initialize logic & load game data & perform calculations needed
         Logic logic = new Logic();
         logic.setGameRounds(gameRounds);
         logic.calculateSkillRatingChange();
