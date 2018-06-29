@@ -12,36 +12,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 public class ExcelReader {
 
     private XSSFWorkbook workbook;
     private ArrayList<GameRound> gameRounds = new ArrayList<>();
-
-    // TODO: refactor this out of excelreader and into a new class Champions
-    private List<Champion> champions = new ArrayList<>();
-    private Champion ana = new Champion("Ana", "Support");
-    private Champion brigitte = new Champion("Brigitte", "Support");
-    private Champion zenyatta = new Champion("Zenyatta", "Support");
-    private Champion mix = new Champion("unknown", "unknown");
-
-    // TODO: refactor this out of excelreader and into a new class Maps
-    private List<Map> maps = new ArrayList<>();
-    private Map blizzardWorld = new Map("Blizzard World", "Hybrid Payload");
-    private Map dorado = new Map("Dorado", "Payload");
-    private Map eichenwalde = new Map("Eichenwalde", "Hybrid Payload");
-    private Map hanamura = new Map("Hanamura", "2 Capture Points");
-    private Map junkertown = new Map("Junkertown", "Payload");
-    private Map kingsRow = new Map("Kings Row", "Hybrid Payload");
-    private Map liangTowers = new Map("Liang Towers", "King of the Hill");
-    private Map lunarColony = new Map("Lunar Colony", "2 Capture Points");
-    private Map nepal = new Map("Nepal", "King of the Hill");
-    private Map rialto = new Map("Rialto", "Payload");
-    private Map route66 = new Map("Route 66", "Payload");
-    private Map templeOfAnubis = new Map("Temple of Anubis", "2 Capture Points");
-    private Map volskayaIndustries = new Map("Volskaya Industries", "2 Capture Points");
-
+    private Set<Champion> champions;
+    private Set<Map> maps;
 
     //REQUIRES: .xlsx document in correct hardcoded os address
     //MODIFIES: this
@@ -56,40 +34,16 @@ public class ExcelReader {
     public ArrayList<GameRound> getGameRounds() {
         return gameRounds;
     }
-    public List<Champion> getChampions(List<Champion> champions) {
-        return champions;
+
+    // Setters
+    public void setChampions(Set<Champion> champions) {
+        this.champions = champions;
     }
-    public List<Map> getMaps(List<Map> maps) {
-        return maps;
+    public void setMaps(Set<Map> maps) {
+        this.maps = maps;
     }
 
-    // populate list
-    // TODO: refactor this out of excelreader and into a new class Champions
-    public void addChampionsToList() {
-        champions.add(ana);
-        champions.add(brigitte);
-        champions.add(zenyatta);
-        champions.add(mix);
-    }
-    // TODO: refactor this out of excelreader and into a new class Maps
-    public void addMapsToList() {
-        maps.add(blizzardWorld);
-        maps.add(dorado);
-        maps.add(eichenwalde);
-        maps.add(hanamura);
-        maps.add(junkertown);
-        maps.add(kingsRow);
-        maps.add(liangTowers);
-        maps.add(lunarColony);
-        maps.add(nepal);
-        maps.add(rialto);
-        maps.add(route66);
-        maps.add(templeOfAnubis);
-        maps.add(volskayaIndustries);
-    }
-
-
-    //TODO: refactor parts of this method out of ExcelReader. Currently its both reading and assigning, can this be split up?
+    //TODO: refactor parts of this method. Currently its both reading and assigning, can this be split up into smaller components?
     //REQUIRES: workbook set through class constructor
     //MODIFIES: GameRound objects, gameRounds list
     //EFFECTS : iterates over cells and stores values into gameSession Objects. Creating new
