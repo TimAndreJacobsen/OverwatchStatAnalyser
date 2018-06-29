@@ -60,38 +60,46 @@ public class ExcelReader {
             for (Cell cell : row) {
                 System.out.println("Cell Address: " + cell.getAddress());
                 String text = formatter.formatCellValue(cell);
-                int gameRoundIndex = row.getRowNum() - 1;
+                int rowIndex = row.getRowNum() - 1;
 
                 switch (cell.getColumnIndex()) {
                     case 0:
                         System.out.println();
-                        gameRounds.get(gameRoundIndex).setSkillRating(Integer.parseInt(text));
+                        gameRounds.get(rowIndex).setSkillRating(Integer.parseInt(text));
                         break;
                     case 1:
                         for (Champion c : champions) {
                             if (text.equalsIgnoreCase(c.getName())) {
-                                gameRounds.get(gameRoundIndex).setChampion(c);
+                                gameRounds.get(rowIndex).setChampion(c);
+                                break;
+                            } else { // If champion is not mentioned in the list, assign it to other
+                                for (Champion other : champions) {
+                                    if (other.getName().equals("Other")) {
+                                        gameRounds.get(rowIndex).setChampion(other);
+                                        break;
+                                    }
+                                }
                             }
                         }
                         break;
                     case 2:
                         if (text.equalsIgnoreCase("win")) {
-                            gameRounds.get(gameRoundIndex).setIsWin(true);
+                            gameRounds.get(rowIndex).setIsWin(true);
                         } else {
-                            gameRounds.get(gameRoundIndex).setIsWin(false);
+                            gameRounds.get(rowIndex).setIsWin(false);
                             break;
                         }
                     case 3:
                         for (Map m : maps) {
                             if (text.equalsIgnoreCase(m.getName())) {
-                                gameRounds.get(gameRoundIndex).setMap(m);
+                                gameRounds.get(rowIndex).setMap(m);
                             }
                         }
                     case 5:
-                        gameRounds.get(gameRoundIndex).setDate(text);
+                        gameRounds.get(rowIndex).setDate(text);
                         break;
                     case 6:
-                        gameRounds.get(gameRoundIndex).setAudioType(text);
+                        gameRounds.get(rowIndex).setAudioType(text);
                         break;
                 }
             }
