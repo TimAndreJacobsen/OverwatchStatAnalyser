@@ -4,23 +4,25 @@ import com.overwatch.statistics.gameround.GameRound;
 import com.overwatch.statistics.gameround.model.Champion;
 import com.overwatch.statistics.gameround.model.Map;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Logic {
 
     private List<GameRound> gameRounds;
-    private List<Map> mapList;
-    private List<Champion> championList;
+    private Set<Map> maps;
+    private Set<Champion> champions;
 
     // Setters
-    public void setMapList(List<Map> mapList) {
-        this.mapList = mapList;
+    public void setMapSet(HashSet<Map> mapList) {
+        this.maps = mapList;
     }
-    public void setChampionList(List<Champion> championList) {
-        this.championList = championList;
+    public void setChampionSet(HashSet<Champion> championList) {
+        this.champions = championList;
     }
 
-    public void loadGameRounds(List<GameRound> gameRounds) {
+    public void setGameRounds(List<GameRound> gameRounds) {
         this.gameRounds = gameRounds;
     }
 
