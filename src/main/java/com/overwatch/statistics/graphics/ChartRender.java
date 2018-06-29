@@ -1,6 +1,7 @@
 package com.overwatch.statistics.graphics;
 
-import com.overwatch.statistics.gamesession.GameRound;
+import com.overwatch.statistics.gameround.GameRound;
+import com.overwatch.statistics.gameround.logic.Logic;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
@@ -16,7 +17,6 @@ public class ChartRender {
     public ChartRender(List<GameRound> gameRounds) {
         this.gameRounds = gameRounds;
     }
-
 
     public void setGameRounds(List<GameRound> gameRounds) {
         this.gameRounds = gameRounds;
