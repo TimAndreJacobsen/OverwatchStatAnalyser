@@ -4,7 +4,6 @@ import com.overwatch.statistics.gameround.GameRound;
 import com.overwatch.statistics.gameround.model.Champion;
 import com.overwatch.statistics.gameround.model.Map;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -15,17 +14,19 @@ public class Logic {
     private Set<Champion> champions;
 
     // Setters
-    public void setMapSet(HashSet<Map> mapList) {
-        this.maps = mapList;
+    public void setMaps(Set<Map> maps) {
+        this.maps = maps;
     }
-    public void setChampionSet(HashSet<Champion> championList) {
-        this.champions = championList;
+    public void setChampions(Set<Champion> champions) {
+        this.champions = champions;
     }
-
     public void setGameRounds(List<GameRound> gameRounds) {
         this.gameRounds = gameRounds;
     }
 
+    // REQUIRES: gameRounds != null
+    // MODIFIES: gameRound in gameRounds
+    // EFFECTS : calculate change in skill rating from the round
     public void calculateSkillRatingChange() {
         for (int i = 1; i < gameRounds.size(); i++) {
             int previousRound = gameRounds.get(i - 1).getSkillRating();
@@ -34,14 +35,22 @@ public class Logic {
         }
     }
 
-    public double calculateWinRate(String map, String champ) {
+    // REQUIRES: champions != null
+    // MODIFIES: Champion.totalWinRate for each in champions
+    // EFFECTS : calculates and sets total win rate for each champion
+    public void calculateTotalWinRate() {
+        for (Champion c : champions) {
+            c.setWinRate(calculateWinRates(c));
+        }
+    }
+
+    // Helper method for calculateTotalWinRate()
+    private double calculateWinRates(Champion c) {
         int roundsPlayed = 0;
         int roundsWon = 0;
 
         for (GameRound r : gameRounds) {
-            if (r.getMapName().equalsIgnoreCase(map)
-                    && r.getChampion().equalsIgnoreCase(champ)) {
-
+            if (c == r.getChampion()) {
                 roundsPlayed++;
                 if (r.isWin()) {
                     roundsWon++;
@@ -50,6 +59,4 @@ public class Logic {
         }
         return roundsPlayed / roundsWon;
     }
-
-
 }
