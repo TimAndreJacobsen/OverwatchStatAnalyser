@@ -88,22 +88,10 @@ public class LogicTest {
     @Test
     public void testCalculateTotalWinRates() {
         List<GameRound>gameRounds = new ArrayList<>();
-        GameRound r1 = new GameRound();
-        r1.setChampion(c1);
-        r1.setMap(map1);
-        r1.setIsWin(true);
-        GameRound r2 = new GameRound();
-        r2.setChampion(c1);
-        r2.setMap(map1);
-        r2.setIsWin(false);
-        GameRound r3 = new GameRound();
-        r3.setChampion(c1);
-        r3.setMap(map2);
-        r3.setIsWin(true);
-        GameRound r4 = new GameRound();
-        r4.setChampion(c1);
-        r4.setMap(map2);
-        r4.setIsWin(true);
+        GameRound r1 = new GameRound(c1, map1, true);
+        GameRound r2 = new GameRound(c1, map1, false);
+        GameRound r3 = new GameRound(c1, map2, true);
+        GameRound r4 = new GameRound(c1, map2, true);
         gameRounds.add(r1);
         gameRounds.add(r2);
         gameRounds.add(r3);
@@ -113,24 +101,12 @@ public class LogicTest {
     }
 
     @Test
-    public void testCalculateWinRatePerMap() {
+    public void testCalculateWinRateEachMap() {
         List<GameRound>gameRounds = new ArrayList<>();
-        GameRound r1 = new GameRound();
-        r1.setChampion(c1);
-        r1.setMap(map1);
-        r1.setIsWin(true);
-        GameRound r2 = new GameRound();
-        r2.setChampion(c1);
-        r2.setMap(map1);
-        r2.setIsWin(false);
-        GameRound r3 = new GameRound();
-        r3.setChampion(c1);
-        r3.setMap(map2);
-        r3.setIsWin(true);
-        GameRound r4 = new GameRound();
-        r4.setChampion(c1);
-        r4.setMap(map2);
-        r4.setIsWin(true);
+        GameRound r1 = new GameRound(c1, map1, true);
+        GameRound r2 = new GameRound(c1, map1, false);
+        GameRound r3 = new GameRound(c1, map2, true);
+        GameRound r4 = new GameRound(c1, map2, true);
         gameRounds.add(r1);
         gameRounds.add(r2);
         gameRounds.add(r3);
