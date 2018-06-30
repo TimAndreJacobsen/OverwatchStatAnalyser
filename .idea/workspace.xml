@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
     <list default="true" id="484b9023-bfef-47d2-afea-e836d7a5649c" name="Default" comment="overloaded constructor to make object creation more succinct">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java" afterDir="false" />
     </list>
-    <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -169,11 +169,10 @@
       <file leaf-file-name="LogicTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="165" column="65" selection-start-line="165" selection-start-column="65" selection-end-line="165" selection-end-column="65" />
+            <state relative-caret-position="-986">
+              <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
               <folding>
                 <element signature="method#testGetters#0;class#LogicTest#0" />
-                <element signature="method#testCalculateTotalWinRates#0;class#LogicTest#0" />
               </folding>
             </state>
           </provider>
@@ -898,39 +897,46 @@
       <option name="project" value="LOCAL" />
       <updated>1530358258702</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="updated">
+      <created>1530358832183</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1530358832183</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LogicTest - 2018.06.30 at 12h 46m 30s.xml">
-      <configuration name="LogicTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateTotalWinRates - 2018.06.30 at 12h 47m 17s.xml">
-      <configuration name="LogicTest.testCalculateTotalWinRates" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateTotalWinRates - 2018.06.30 at 12h 48m 45s.xml">
-      <configuration name="LogicTest.testCalculateTotalWinRates" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateTotalWinRates - 2018.06.30 at 12h 59m 50s.xml">
-      <configuration name="LogicTest.testCalculateTotalWinRates" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRatePerMap - 2018.06.30 at 13h 07m 16s.xml">
-      <configuration name="LogicTest.testCalculateWinRatePerMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRatePerMap - 2018.06.30 at 13h 07m 45s.xml">
-      <configuration name="LogicTest.testCalculateWinRatePerMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRatePerMap - 2018.06.30 at 13h 10m 47s.xml">
-      <configuration name="LogicTest.testCalculateWinRatePerMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRatePerMap - 2018.06.30 at 13h 11m 06s.xml">
-      <configuration name="LogicTest.testCalculateWinRatePerMap" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LogicTest_testCalculateWinRatePerMap - 2018.06.30 at 13h 11m 51s.xml">
       <configuration name="LogicTest.testCalculateWinRatePerMap" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LogicTest_testCalculateWinRatePerMap - 2018.06.30 at 13h 12m 18s.xml">
       <configuration name="LogicTest.testCalculateWinRatePerMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 36m 02s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 37m 47s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 00s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 07s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 11s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 14s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 19s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateTotalWinRates - 2018.06.30 at 13h 39m 39s.xml">
+      <configuration name="LogicTest.testCalculateTotalWinRates" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -955,11 +961,11 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5021322" side_tool="true" weight="0.46732026" />
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32995737" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.4978678" weight="0.46732026" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4989339" weight="0.4019608" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4989339" visible="true" weight="0.4019608" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32897604" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.15778251" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.15778251" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -1039,7 +1045,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Champion initialization is now being done in its own ChampionRoster class." />
     <MESSAGE value="Changed maps/champions from List to Set." />
     <MESSAGE value="updated package name in imports" />
     <MESSAGE value="Changed method name to better explain what is happening in the method." />
@@ -1064,7 +1069,8 @@
     <MESSAGE value="moved initialization of gameRounds" />
     <MESSAGE value="added test for Logic.calculateWinRatePerMap()" />
     <MESSAGE value="overloaded constructor to make object creation more succinct" />
-    <option name="LAST_COMMIT_MESSAGE" value="overloaded constructor to make object creation more succinct" />
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1090,7 +1096,6 @@
           <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
           <folding>
             <element signature="method#testGetters#0;class#LogicTest#0" />
-            <element signature="method#testCalculateTotalWinRates#0;class#LogicTest#0" />
           </folding>
         </state>
       </provider>
@@ -1466,11 +1471,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="165" column="65" selection-start-line="165" selection-start-column="65" selection-end-line="165" selection-end-column="65" />
+        <state relative-caret-position="-986">
+          <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
           <folding>
             <element signature="method#testGetters#0;class#LogicTest#0" />
-            <element signature="method#testCalculateTotalWinRates#0;class#LogicTest#0" />
           </folding>
         </state>
       </provider>
