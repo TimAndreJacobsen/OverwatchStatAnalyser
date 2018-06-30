@@ -40,12 +40,11 @@ public class Logic {
     // EFFECTS : calculates and sets total win rate for each champion
     public void calculateTotalWinRate() {
         for (Champion c : champions) {
-            c.setWinRate(calculateWinRates(c));
+            c.setWinRate(calculateTotalWinRates(c));
         }
     }
 
-    // Helper method for calculateTotalWinRate()
-    private double calculateWinRates(Champion c) {
+    private double calculateTotalWinRates(Champion c) {
         int roundsPlayed = 0;
         int roundsWon = 0;
 
@@ -59,4 +58,36 @@ public class Logic {
         }
         return roundsPlayed / roundsWon;
     }
+
+    private double calculateTotalWinRates(Champion c, Map m) {
+        int roundsPlayed = 0;
+        int roundsWon = 0;
+
+        for (GameRound r : gameRounds) {
+            if (c == r.getChampion() && m == r.getMap()) {
+                roundsPlayed++;
+                if (r.isWin()) {
+                    roundsWon++;
+                }
+            }
+        }
+        if (roundsPlayed == 0 || roundsWon == 0) {
+            return 0.0;
+        }
+        return roundsPlayed / roundsWon;
+    }
+
+    public void calculateWinRatePerMap() {
+        for (Champion c : champions) {
+
+            for (Map m : maps) {
+                double winRate = calculateTotalWinRates(c, m);
+                c.getWinRateEachMap().put(m, winRate);
+            }
+        }
+    }
+
+
+
+    // Helper method for calculateTotalWinRate()
 }
