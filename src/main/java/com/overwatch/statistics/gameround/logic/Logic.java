@@ -56,6 +56,9 @@ public class Logic {
                 }
             }
         }
+        if (roundsPlayed == 0 || roundsWon == 0) {
+            return 0.0;
+        }
         return roundsPlayed / roundsWon;
     }
 
