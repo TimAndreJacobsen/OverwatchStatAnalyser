@@ -17,7 +17,7 @@ public class ui {
     private Logic logic;
     private List<GameRound> gameRounds;
     private Maps maps = new Maps();
-    private ChampionRoster champions = new ChampionRoster();
+    private ChampionRoster championRoster = new ChampionRoster();
 
     protected void initialize() {
         initializeReader();        // Initialize Reader
@@ -45,14 +45,14 @@ public class ui {
 
     private void populateModels() {
         maps.addMapsToList();
-        champions.setMaps(maps.getMaps());
-        champions.addChampionsToList();
+        championRoster.setMaps(maps.getMaps());
+        championRoster.addChampionsToList();
     }
 
     private void readExcelWorkBook() {
         // Load data
         excelReader.setMaps(maps.getMaps());
-        excelReader.setChampions(champions.getChampions());
+        excelReader.setChampions(championRoster.getChampions());
 
         // Parse .xlsx file to ArrayList
         excelReader.readWorkbook();
@@ -61,15 +61,12 @@ public class ui {
 
     private void initLogic() {
         logic = new Logic();
-        logic.setGameRounds(gameRounds);
-        logic.setMaps(maps.getMaps());
-        logic.setChampions(champions.getChampions());
     }
 
     private void computeData() {
-        logic.calculateSkillRatingChange();
-        logic.calculateTotalWinRate();
-        logic.calculateWinRatePerMap();
+        logic.calculateSkillRatingChange(gameRounds);
+        logic.calculateTotalWinRate(championRoster.getChampions(), gameRounds);
+        logic.calculateWinRateEachMapAllChampions(championRoster.getChampions(), maps.getMaps(), gameRounds);
     }
 
     //TODO: Create generic chartRenderer that takes 2 params: X, Y axis values
