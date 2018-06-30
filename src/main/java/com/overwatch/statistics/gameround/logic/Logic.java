@@ -44,7 +44,7 @@ public class Logic {
         }
     }
 
-    private double calculateTotalWinRates(Champion c) {
+    public double calculateTotalWinRates(Champion c) {
         int roundsPlayed = 0;
         int roundsWon = 0;
 
@@ -59,10 +59,10 @@ public class Logic {
         if (roundsPlayed == 0 || roundsWon == 0) {
             return 0.0;
         }
-        return roundsPlayed / roundsWon;
+        return (double) roundsWon / roundsPlayed;
     }
 
-    private double calculateTotalWinRates(Champion c, Map m) {
+    public double calculateTotalWinRates(Champion c, Map m) {
         int roundsPlayed = 0;
         int roundsWon = 0;
 
