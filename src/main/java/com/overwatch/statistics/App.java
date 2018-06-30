@@ -22,7 +22,6 @@ public class App extends Application {
         launch(args);
     }
 
-
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Overwatch Statistical analysis utility");

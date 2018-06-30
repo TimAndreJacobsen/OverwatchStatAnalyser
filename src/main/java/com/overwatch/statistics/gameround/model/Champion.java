@@ -23,4 +23,24 @@ public class Champion {
             winRateEachMap.put(m, 0.0);
         }
     }
+
+    // Getters
+    public String getName() {
+        return this.name;
+    }
+    public String getRole() {
+        return role;
+    }
+    public double getTotalWinRate() {
+        return totalWinRate;
+    }
+    public HashMap<Map, Double> getWinRateEachMap() {
+        return winRateEachMap;
+    }
+
+    // Setters
+    public void setWinRate(double winRate) {
+        this.totalWinRate = winRate;
+    }
+
 }
