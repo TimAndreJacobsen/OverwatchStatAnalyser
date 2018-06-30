@@ -44,9 +44,9 @@ public class Logic {
         }
     }
 
-    public double calculateTotalWinRates(Champion c) {
-        double roundsPlayed = 0;
-        double roundsWon = 0;
+    private double calculateTotalWinRates(Champion c) {
+        int roundsPlayed = 0;
+        int roundsWon = 0;
 
         for (GameRound r : gameRounds) {
             if (c == r.getChampion()) {
@@ -59,8 +59,7 @@ public class Logic {
         if (roundsPlayed == 0 || roundsWon == 0) {
             return 0.0;
         }
-        System.out.println("roundswon: " + roundsWon + " / roundsplayed: " + roundsPlayed + " = " + roundsWon/roundsPlayed);
-        return roundsWon / roundsPlayed;
+        return roundsPlayed / roundsWon;
     }
 
     private double calculateTotalWinRates(Champion c, Map m) {
