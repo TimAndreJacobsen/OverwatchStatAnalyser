@@ -9,25 +9,10 @@ import java.util.Set;
 
 public class Logic {
 
-    private List<GameRound> gameRounds;
-    private Set<Map> maps;
-    private Set<Champion> champions;
-
-    // Setters
-    public void setMaps(Set<Map> maps) {
-        this.maps = maps;
-    }
-    public void setChampions(Set<Champion> champions) {
-        this.champions = champions;
-    }
-    public void setGameRounds(List<GameRound> gameRounds) {
-        this.gameRounds = gameRounds;
-    }
-
     // REQUIRES: gameRounds != null
     // MODIFIES: gameRound in gameRounds
     // EFFECTS : calculate change in skill rating from the round
-    public void calculateSkillRatingChange() {
+    public void calculateSkillRatingChange(List<GameRound> gameRounds) {
         for (int i = 1; i < gameRounds.size(); i++) {
             int previousRound = gameRounds.get(i - 1).getSkillRating();
             int thisRound = gameRounds.get(i).getSkillRating();
@@ -38,13 +23,13 @@ public class Logic {
     // REQUIRES: champions != null
     // MODIFIES: Champion.totalWinRate for each in champions
     // EFFECTS : calculates and sets total win rate for each champion
-    public void calculateTotalWinRate() {
+    public void calculateTotalWinRate(Set<Champion> champions, List<GameRound> gameRounds) {
         for (Champion c : champions) {
-            c.setWinRate(calculateTotalWinRates(c));
+            c.setWinRate(calculateTotalWinRates(c, gameRounds));
         }
     }
 
-    public double calculateTotalWinRates(Champion c) {
+    public double calculateTotalWinRates(Champion c, List<GameRound> gameRounds) {
         int roundsPlayed = 0;
         int roundsWon = 0;
 
@@ -62,7 +47,7 @@ public class Logic {
         return (double) roundsWon / roundsPlayed;
     }
 
-    public double calculateTotalWinRates(Champion c, Map m) {
+    public double calculateWinRatesEachMap(Champion c, Map m, List<GameRound> gameRounds) {
         int roundsPlayed = 0;
         int roundsWon = 0;
 
@@ -77,14 +62,14 @@ public class Logic {
         if (roundsPlayed == 0 || roundsWon == 0) {
             return 0.0;
         }
-        return roundsPlayed / roundsWon;
+        return (double) roundsWon/ roundsPlayed;
     }
 
-    public void calculateWinRatePerMap() {
+    public void calculateWinRateEachMapAllChampions(Set<Champion> champions, Set<Map> maps, List<GameRound> gameRounds) {
         for (Champion c : champions) {
 
             for (Map m : maps) {
-                double winRate = calculateTotalWinRates(c, m);
+                double winRate = calculateWinRatesEachMap(c, m, gameRounds);
                 c.getWinRateEachMap().put(m, winRate);
             }
         }
