@@ -111,4 +111,32 @@ public class LogicTest {
 
         assertEquals(0.75 , logic.calculateTotalWinRates(c1, gameRounds) , 0.001);
     }
+
+    @Test
+    public void testCalculateWinRatePerMap() {
+        List<GameRound>gameRounds = new ArrayList<>();
+        GameRound r1 = new GameRound();
+        r1.setChampion(c1);
+        r1.setMap(map1);
+        r1.setIsWin(true);
+        GameRound r2 = new GameRound();
+        r2.setChampion(c1);
+        r2.setMap(map1);
+        r2.setIsWin(false);
+        GameRound r3 = new GameRound();
+        r3.setChampion(c1);
+        r3.setMap(map2);
+        r3.setIsWin(true);
+        GameRound r4 = new GameRound();
+        r4.setChampion(c1);
+        r4.setMap(map2);
+        r4.setIsWin(true);
+        gameRounds.add(r1);
+        gameRounds.add(r2);
+        gameRounds.add(r3);
+        gameRounds.add(r4);
+
+        assertEquals(0.5, logic.calculateWinRatesEachMap(c1, map1, gameRounds) , 0.01);
+        assertEquals(1, logic.calculateWinRatesEachMap(c1, map2, gameRounds), 0.01);
+    }
 }
