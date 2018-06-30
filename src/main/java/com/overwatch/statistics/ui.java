@@ -5,28 +5,19 @@ import com.overwatch.statistics.gameround.GameRound;
 import com.overwatch.statistics.gameround.logic.Logic;
 import com.overwatch.statistics.gameround.model.ChampionRoster;
 import com.overwatch.statistics.gameround.model.Maps;
-import com.overwatch.statistics.graphics.ChartRender;
+import com.overwatch.statistics.graphics.ChartRenderer;
 import javafx.scene.chart.LineChart;
 
 import java.io.IOException;
 import java.util.List;
 
 public class ui {
-
     private ExcelReader excelReader;
-    private ChartRender chartRender;
+    private ChartRenderer chartRender;
     private Logic logic;
     private List<GameRound> gameRounds;
     private Maps maps = new Maps();
     private ChampionRoster champions = new ChampionRoster();
-
-
-
-    private void populateModels() {
-        maps.addMapsToList();
-        champions.setMaps(maps.getMaps());
-        champions.addChampionsToList();
-    }
 
     protected void initialize() {
         initializeReader();        // Initialize Reader
@@ -36,16 +27,26 @@ public class ui {
         computeData();        // Calculate Champion data
     }
 
-    private void computeData() {
-        logic.calculateSkillRatingChange();
-        logic.calculateTotalWinRate();
+    protected LineChart generateLineChart() {
+        ChartRenderer lineChart = new ChartRenderer(gameRounds);
+        return lineChart.getSkillOverRoundsPlayed();
     }
 
-    private void initLogic() {
-        logic = new Logic();
-        logic.setGameRounds(gameRounds);
-        logic.setMaps(maps.getMaps());
-        logic.setChampions(champions.getChampions());
+    private void initializeReader() {
+        System.out.println("initializing reader");
+        try {
+            excelReader = new ExcelReader();
+        } catch (IOException e) {
+            System.out.println("File not found...");
+            e.printStackTrace();
+        }
+        System.out.println("file loaded successfully");
+    }
+
+    private void populateModels() {
+        maps.addMapsToList();
+        champions.setMaps(maps.getMaps());
+        champions.addChampionsToList();
     }
 
     private void readExcelWorkBook() {
@@ -58,9 +59,17 @@ public class ui {
         gameRounds = excelReader.getGameRounds();
     }
 
-    protected LineChart generateLineChart() {
-        ChartRender lineChart = new ChartRender(gameRounds);
-        return lineChart.getSkillOverRoundsPlayed();
+    private void initLogic() {
+        logic = new Logic();
+        logic.setGameRounds(gameRounds);
+        logic.setMaps(maps.getMaps());
+        logic.setChampions(champions.getChampions());
+    }
+
+    private void computeData() {
+        logic.calculateSkillRatingChange();
+        logic.calculateTotalWinRate();
+        logic.calculateWinRatePerMap();
     }
 
     //TODO: Create generic chartRenderer that takes 2 params: X, Y axis values
@@ -69,15 +78,8 @@ public class ui {
 //        return barChart.getSupportWinRateByMap();
 //    }
 
-    private void initializeReader() {
-        System.out.println("initializing reader");
-        try {
-            excelReader = new ExcelReader();
-        } catch (IOException e) {
-            System.out.println("File not found...");
-            e.printStackTrace();
-        }
-        System.out.println("file loaded successfully");
-    }
+    //TODO: Create Barchart showing winrates for each support hero on a per map basis
+
+
 
 }
