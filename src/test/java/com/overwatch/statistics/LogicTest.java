@@ -115,4 +115,35 @@ public class LogicTest {
         assertEquals(0.5, logic.calculateWinRatesEachMap(c1, map1, gameRounds) , 0.01);
         assertEquals(1, logic.calculateWinRatesEachMap(c1, map2, gameRounds), 0.01);
     }
+
+    @Test
+    public void testCalculateWinRateEachMapAllChampions() {
+        List<GameRound>gameRounds = new ArrayList<>();
+        GameRound r1 = new GameRound(c1, map1, true);
+        GameRound r2 = new GameRound(c1, map1, true);
+        GameRound r3 = new GameRound(c1, map2, true);
+        GameRound r4 = new GameRound(c1, map2, false);
+        GameRound r5 = new GameRound(c2, map1, false);
+        GameRound r6 = new GameRound(c2, map1, false);
+        GameRound r7 = new GameRound(c2, map2, true);
+        GameRound r8 = new GameRound(c2, map2, false);
+        GameRound r9 = new GameRound(c2, map2, false);
+
+        gameRounds.add(r1);
+        gameRounds.add(r2);
+        gameRounds.add(r3);
+        gameRounds.add(r4);
+        gameRounds.add(r5);
+        gameRounds.add(r6);
+        gameRounds.add(r7);
+        gameRounds.add(r8);
+        gameRounds.add(r9);
+
+        logic.calculateWinRateEachMapAllChampions(champions,maps,gameRounds);
+
+        assertEquals(1.0, c1.getWinRateEachMap().get(map1), 0.001);
+        assertEquals(0.5, c1.getWinRateEachMap().get(map2), 0.001);
+        assertEquals(0.0, c2.getWinRateEachMap().get(map1), 0.001);
+        assertEquals(0.333, c2.getWinRateEachMap().get(map2), 0.001);
+    }
 }
