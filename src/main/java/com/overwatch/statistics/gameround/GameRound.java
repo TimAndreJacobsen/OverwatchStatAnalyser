@@ -23,6 +23,16 @@ public class GameRound {
         this.skillRatingChange = 0;
     }
 
+    public GameRound(Champion c, Map m, boolean isWin) {
+        this.skillRating = -1;
+        this.champion = c;
+        this.isWin = isWin;
+        this.map = m;
+        this.date = "";
+        this.audioType = "";
+        this.skillRatingChange = 0;
+    }
+
     // Getters
     public int getSkillRating() {
         return skillRating;
