@@ -12,7 +12,7 @@ public class Champion {
     private Set<Map> maps;
     private HashMap<Map, Double> winRateEachMap;
 
-    Champion(String name, String role, Set<Map> maps) {
+    public Champion(String name, String role, Set<Map> maps) {
         this.name = name;
         this.role = role;
         this.totalWinRate = 0;
