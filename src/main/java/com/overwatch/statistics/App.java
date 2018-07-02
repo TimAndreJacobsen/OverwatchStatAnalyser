@@ -34,8 +34,7 @@ public class App extends Application {
         LineChart chart = ui.generateLineChart();
 
         // Adding all elements
-        root.setLeft(addVBox());
-        root.setTop(addHBox(root, chart));
+        root.setTop(addHBox(root));
 
         primaryStage.setScene(new Scene(root, 900, 720));
         primaryStage.show();
@@ -60,26 +59,9 @@ public class App extends Application {
         return hbox;
     }
 
-    private VBox addVBox() {
-        VBox vbox = new VBox();
-        vbox.setPadding(new Insets(10));
-        vbox.setSpacing(8);
-
-        Text title = new Text("Filters");
-        title.setFont(Font.font("Arial", FontWeight.BOLD, 14));
-        vbox.getChildren().add(title);
-
-        Hyperlink options[] = new Hyperlink[] {
-                new Hyperlink("Skill Rating"),
-                new Hyperlink("Heroes"),
-                new Hyperlink("Win Percent"),
-                new Hyperlink("Time Played")};
-
-        for (int i=0; i<4; i++) {
-            VBox.setMargin(options[i], new Insets(0, 0, 0, 8));
-            vbox.getChildren().add(options[i]);
-        }
-        return vbox;
+    private void renderLineChart(BorderPane root) {
+        LineChart lineChart = ui.generateLineChart();
+        root.setCenter(lineChart);
     }
 
 
