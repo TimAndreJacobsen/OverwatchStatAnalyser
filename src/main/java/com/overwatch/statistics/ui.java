@@ -3,9 +3,12 @@ package com.overwatch.statistics;
 import com.overwatch.statistics.filehandler.ExcelReader;
 import com.overwatch.statistics.gameround.GameRound;
 import com.overwatch.statistics.gameround.logic.Logic;
+import com.overwatch.statistics.gameround.model.Champion;
 import com.overwatch.statistics.gameround.model.ChampionRoster;
+import com.overwatch.statistics.gameround.model.Map;
 import com.overwatch.statistics.gameround.model.Maps;
 import com.overwatch.statistics.graphics.ChartRenderer;
+import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 
 import java.io.IOException;
@@ -30,6 +33,11 @@ public class ui {
     protected LineChart generateLineChart() {
         ChartRenderer lineChart = new ChartRenderer(gameRounds);
         return lineChart.getSkillOverRoundsPlayed();
+    }
+
+    protected BarChart generateBarChart() {
+        ChartRenderer barChart = new ChartRenderer(gameRounds);
+        return barChart.getSupportWinRateByMap(championRoster.getChampions(), maps.getMaps());
     }
 
     private void initializeReader() {
@@ -69,14 +77,4 @@ public class ui {
         logic.calculateWinRateEachMapAllChampions(championRoster.getChampions(), maps.getMaps(), gameRounds);
     }
 
-    //TODO: Create generic chartRenderer that takes 2 params: X, Y axis values
-//    public BarChart createBarChart(List<String> champion) {
-//        ChartRender barChart = new ChartRender(gameRounds);
-//        return barChart.getSupportWinRateByMap();
-//    }
-
-    //TODO: Create Barchart showing winrates for each support hero on a per map basis
-
-
-
-}
+  }
