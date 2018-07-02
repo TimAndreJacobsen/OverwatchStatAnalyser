@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
-    <list default="true" id="484b9023-bfef-47d2-afea-e836d7a5649c" name="Default" comment="overloaded constructor to make object creation more succinct">
+    <list default="true" id="484b9023-bfef-47d2-afea-e836d7a5649c" name="Default" comment="implemented barchart Hero win rate over map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/filehandler/ExcelReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/filehandler/ExcelReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Maps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Maps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/ui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/overwatch/statistics/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overwatch/statistics/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java" afterDir="false" />
     </list>
+    <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,62 +23,13 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="Logic.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="600">
-                    <caret line="71" column="50" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
-                    <folding>
-                      <element signature="method#calculateSkillRatingChange#0;class#Logic#0" />
-                      <element signature="method#calculateTotalWinRate#0;class#Logic#0" />
-                      <element signature="method#calculateTotalWinRates#0;class#Logic#0" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="App.java" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/AppTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChartRenderer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2400">
-              <caret line="105" column="7" selection-start-line="52" selection-end-line="105" selection-end-column="7" />
-              <folding>
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="200">
+              <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -82,8 +37,8 @@
       <file leaf-file-name="Logic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+            <state relative-caret-position="79">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="method#calculateSkillRatingChange#0;class#Logic#0" />
                 <element signature="method#calculateTotalWinRate#0;class#Logic#0" />
@@ -93,19 +48,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ChartRenderer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Champion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Champion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+              <folding>
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GameRound.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/GameRound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="168">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#770#771#0" expanded="true" />
-                <element signature="e#799#800#0" expanded="true" />
-                <element signature="e#827#828#0" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,17 +88,36 @@
       <file leaf-file-name="ui.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/ui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1000">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="93">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initialize#0;class#ui#0" />
                 <element signature="method#generateLineChart#0;class#ui#0" />
-                <element signature="method#initializeReader#0;class#ui#0" />
+                <element signature="method#generateLineChart#1;class#ui#0" />
                 <element signature="method#populateModels#0;class#ui#0" />
                 <element signature="method#readExcelWorkBook#0;class#ui#0" />
-                <element signature="e#2093#2094#0" expanded="true" />
-                <element signature="e#2128#2129#0" expanded="true" />
+                <element signature="method#computeData#0;class#ui#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/filehandler/ExcelReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChampionRoster.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/ChampionRoster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,46 +126,25 @@
       <file leaf-file-name="Maps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Maps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="675">
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
               <folding>
-                <element signature="e#1110#1111#0" expanded="true" />
-                <element signature="e#1137#1138#0" expanded="true" />
+                <element signature="e#1111#1112#0" expanded="true" />
+                <element signature="e#1138#1139#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChampionRoster.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/ChampionRoster.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Champion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Champion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogicTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LogicTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="115" column="48" selection-start-line="115" selection-start-column="48" selection-end-line="115" selection-end-column="48" />
+            <state relative-caret-position="717">
+              <caret line="150" column="1" lean-forward="true" selection-start-line="150" selection-start-column="1" selection-end-line="150" selection-end-column="1" />
               <folding>
+                <element signature="method#setUp#0;class#LogicTest#0" />
                 <element signature="method#testGetters#0;class#LogicTest#0" />
+                <element signature="method#testCalculateTotalWinRates#0;class#LogicTest#0" />
               </folding>
             </state>
           </provider>
@@ -186,6 +158,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>print</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -216,16 +193,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/MapName.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Map.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRender.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Maps.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/filehandler/ExcelReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/ChampionRoster.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Champion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/ui.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/GameRound.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/overwatch/statistics/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Maps.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/ui.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/filehandler/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java" />
       </list>
     </option>
   </component>
@@ -373,9 +351,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,7 +375,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LogicTest.testCalculateTotalWinRates">
+  <component name="RunManager" selected="Application.App">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -569,11 +547,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LogicTest.testCalculateTotalWinRates" />
-        <item itemvalue="JUnit.LogicTest.testCalculateWinRateEachMapAllChampions" />
-        <item itemvalue="JUnit.LogicTest.testCalculateWinRatePerMap" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.LogicTest.testCalculateWinRateEachMapAllChampions" />
         <item itemvalue="JUnit.LogicTest" />
+        <item itemvalue="JUnit.LogicTest.testCalculateTotalWinRates" />
+        <item itemvalue="JUnit.LogicTest.testCalculateWinRatePerMap" />
       </list>
     </recent_temporary>
   </component>
@@ -588,34 +566,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529091617707</updated>
-    </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1529950537490</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1529950537490</updated>
-    </task>
-    <task id="LOCAL-00002" summary="initial commit">
-      <created>1529954216601</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1529954216601</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added basic functionality&#10;-compiles&#10;-draw graph">
-      <created>1529963983873</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1529963983873</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Split ui.run() method into:&#10;ui.initialize() That calls constructors and initialization&#10;ui.generateLineChart() That creates and returns a LineChart">
-      <created>1530024566159</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1530024566159</updated>
     </task>
     <task id="LOCAL-00005" summary="updated method calls to reflect changes in ui class">
       <created>1530024598192</created>
@@ -904,31 +854,66 @@
       <option name="project" value="LOCAL" />
       <updated>1530358832183</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="implemented new constructor in test case creation">
+      <created>1530359011108</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1530359011108</updated>
+    </task>
+    <task id="LOCAL-00047" summary="added test for calculateWinRateEachMapAllChampions()">
+      <created>1530359049822</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1530359049822</updated>
+    </task>
+    <task id="LOCAL-00048" summary="update">
+      <created>1530359069586</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1530359069586</updated>
+    </task>
+    <task id="LOCAL-00049" summary="implemented barchart Hero win rate over map">
+      <created>1530562002979</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1530562002979</updated>
+    </task>
+    <task id="LOCAL-00050" summary="removed VBox as it was not adding additional functionality">
+      <created>1530562133970</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1530562133971</updated>
+    </task>
+    <task id="LOCAL-00051" summary="added method to call generateBarChart">
+      <created>1530562175743</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1530562175743</updated>
+    </task>
+    <task id="LOCAL-00052" summary="factored out chart constructors and added button for barchart.&#10;changed charts to be generated and displayed on demand. instead of previously where they where being generated on startup and sitting idle in memory until user called the method.">
+      <created>1530562416132</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1530562416132</updated>
+    </task>
+    <task id="LOCAL-00053" summary="code style cleanup">
+      <created>1530562496240</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1530562496240</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LogicTest_testCalculateWinRatePerMap - 2018.06.30 at 13h 11m 51s.xml">
-      <configuration name="LogicTest.testCalculateWinRatePerMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRatePerMap - 2018.06.30 at 13h 12m 18s.xml">
-      <configuration name="LogicTest.testCalculateWinRatePerMap" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 36m 02s.xml">
-      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 37m 47s.xml">
-      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 00s.xml">
-      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 07s.xml">
-      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 11s.xml">
-      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 38m 14s.xml">
       <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
     </history-entry>
@@ -937,6 +922,27 @@
     </history-entry>
     <history-entry file="LogicTest_testCalculateTotalWinRates - 2018.06.30 at 13h 39m 39s.xml">
       <configuration name="LogicTest.testCalculateTotalWinRates" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest - 2018.06.30 at 13h 45m 41s.xml">
+      <configuration name="LogicTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 46m 19s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.06.30 at 13h 46m 34s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest - 2018.06.30 at 13h 46m 40s.xml">
+      <configuration name="LogicTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest - 2018.07.02 at 21h 25m 43s.xml">
+      <configuration name="LogicTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.07.02 at 22h 02m 21s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogicTest_testCalculateWinRateEachMapAllChampions - 2018.07.02 at 22h 03m 07s.xml">
+      <configuration name="LogicTest.testCalculateWinRateEachMapAllChampions" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -960,56 +966,37 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5021322" side_tool="true" weight="0.46732026" />
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32995737" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="2" sideWeight="0.4978678" visible="true" weight="0.46732026" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4989339" weight="0.4019608" />
+      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.4978678" weight="0.46732026" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4989339" visible="true" weight="0.4019608" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32897604" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.15778251" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.16257995" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49946696" weight="0.32897604" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39869282" />
-      <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="TMC Project List" order="4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.4978678" weight="0.46732026" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.15778251" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.32897604" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4989339" visible="true" weight="0.4019608" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="0" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49946696" weight="0.32897604" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Designer" order="1" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.39869282" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32897604" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5021322" side_tool="true" weight="0.46732026" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TMC Test Results" order="1" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4989339" weight="0.32897604" />
-      <window_info anchor="right" id="Maven Projects" order="1" weight="0.32995737" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="TMC Project List" order="4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.21350762" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.122068234" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="6" weight="0.4" />
@@ -1018,7 +1005,7 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39869282" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32897604" />
@@ -1065,14 +1052,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Changed maps/champions from List to Set." />
-    <MESSAGE value="updated package name in imports" />
-    <MESSAGE value="Changed method name to better explain what is happening in the method." />
-    <MESSAGE value="Updated method calls to reflect changes in ExcelReader, Maps, ChampionRoster." />
-    <MESSAGE value="Added champion &quot;Other&quot; to parser, whereas before championed remained null if not in set" />
-    <MESSAGE value="changed implementation of calculateTotalWinRate, added comments." />
-    <MESSAGE value="added new fields to Champion.&#10;Champions now know:&#10;Their own total win rate,&#10;The different maps they can go to,&#10;their win rate on a per map basis(soon tm)." />
-    <MESSAGE value="changed champion type mix to other to be consistent across other classes. Put Champion initializations into method. added getters and setters" />
     <MESSAGE value="removed load data button, as data is already being loaded on program start" />
     <MESSAGE value="split method calls in initialize() to class specific methods and added comments." />
     <MESSAGE value="new method added, calculates win rate on a per map basis." />
@@ -1090,32 +1069,45 @@
     <MESSAGE value="added test for Logic.calculateWinRatePerMap()" />
     <MESSAGE value="overloaded constructor to make object creation more succinct" />
     <MESSAGE value="updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated" />
+    <MESSAGE value="implemented new constructor in test case creation" />
+    <MESSAGE value="added test for calculateWinRateEachMapAllChampions()" />
+    <MESSAGE value="update" />
+    <MESSAGE value="implemented barchart Hero win rate over map" />
+    <MESSAGE value="removed VBox as it was not adding additional functionality" />
+    <MESSAGE value="added method to call generateBarChart" />
+    <MESSAGE value="factored out chart constructors and added button for barchart.&#10;changed charts to be generated and displayed on demand. instead of previously where they where being generated on startup and sitting idle in memory until user called the method." />
+    <MESSAGE value="code style cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="code style cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="47" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/ui.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="60" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1325">
-          <caret line="70" column="31" lean-forward="true" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
-          <folding>
-            <element signature="method#calculateSkillRatingChange#0;class#Logic#0" />
-            <element signature="method#calculateTotalWinRate#0;class#Logic#0" />
-            <element signature="method#calculateTotalWinRates#0;class#Logic#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1925">
           <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
           <folding>
+            <element signature="method#setUp#0;class#LogicTest#0" />
             <element signature="method#testGetters#0;class#LogicTest#0" />
+            <element signature="method#testCalculateTotalWinRates#0;class#LogicTest#0" />
+            <element signature="method#testCalculateWinRateEachMap#0;class#LogicTest#0" />
           </folding>
         </state>
       </provider>
@@ -1324,13 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/POI/poi-ooxml/3.17/poi-ooxml-3.17.jar!/org/apache/poi/xssf/usermodel/XSSFRow.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/chart/LineChart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1339,31 +1324,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/MapName.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/POI/poi-ooxml/3.17/poi-ooxml-3.17.jar!/org/apache/poi/xssf/usermodel/XSSFCell.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="353" selection-start-line="353" selection-end-line="353" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/POI/poi/3.17/poi-3.17.jar!/org/apache/poi/ss/usermodel/DataFormatter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-19">
           <caret line="492" column="18" selection-start-line="492" selection-start-column="18" selection-end-line="492" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/filehandler/ExcelReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1374,81 +1338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="105" column="7" selection-start-line="52" selection-end-line="105" selection-end-column="7" />
-          <folding>
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Champion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/ChampionRoster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Maps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="e#1110#1111#0" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/ui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#ui#0" />
-            <element signature="method#generateLineChart#0;class#ui#0" />
-            <element signature="method#initializeReader#0;class#ui#0" />
-            <element signature="method#populateModels#0;class#ui#0" />
-            <element signature="method#readExcelWorkBook#0;class#ui#0" />
-            <element signature="e#2093#2094#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -1456,26 +1345,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/layout/BorderPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="277" column="22" selection-start-line="277" selection-start-column="22" selection-end-line="277" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#294#295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Champion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/POI/poi-ooxml/3.17/poi-ooxml-3.17.jar!/org/apache/poi/xssf/usermodel/XSSFCell.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="353" selection-start-line="353" selection-end-line="353" />
+          <folding>
+            <element signature="e#13557#13558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Maps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding>
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1138#1139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="150" column="1" lean-forward="true" selection-start-line="150" selection-start-column="1" selection-end-line="150" selection-end-column="1" />
+          <folding>
+            <element signature="method#setUp#0;class#LogicTest#0" />
+            <element signature="method#testGetters#0;class#LogicTest#0" />
+            <element signature="method#testCalculateTotalWinRates#0;class#LogicTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/GameRound.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        <state relative-caret-position="168">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/POI/poi-ooxml/3.17/poi-ooxml-3.17.jar!/org/apache/poi/xssf/usermodel/XSSFRow.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#2282#2283#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/logic/Logic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+        <state relative-caret-position="79">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="method#calculateSkillRatingChange#0;class#Logic#0" />
             <element signature="method#calculateTotalWinRate#0;class#Logic#0" />
@@ -1484,13 +1448,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/overwatch/statistics/LogicTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/ChampionRoster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="115" column="48" selection-start-line="115" selection-start-column="48" selection-end-line="115" selection-end-column="48" />
+        <state relative-caret-position="250">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="method#testGetters#0;class#LogicTest#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/filehandler/ExcelReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/ui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="method#generateLineChart#0;class#ui#0" />
+            <element signature="method#generateLineChart#1;class#ui#0" />
+            <element signature="method#populateModels#0;class#ui#0" />
+            <element signature="method#readExcelWorkBook#0;class#ui#0" />
+            <element signature="method#computeData#0;class#ui#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
         </state>
       </provider>
     </entry>
