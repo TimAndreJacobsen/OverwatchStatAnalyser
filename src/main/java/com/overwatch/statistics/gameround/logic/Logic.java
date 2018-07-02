@@ -62,7 +62,7 @@ public class Logic {
         if (roundsPlayed == 0 || roundsWon == 0) {
             return 0.0;
         }
-        return (double) roundsWon/ roundsPlayed;
+        return (double) roundsWon / roundsPlayed;
     }
 
     public void calculateWinRateEachMapAllChampions(Set<Champion> champions, Set<Map> maps, List<GameRound> gameRounds) {
@@ -74,8 +74,4 @@ public class Logic {
             }
         }
     }
-
-
-
-    // Helper method for calculateTotalWinRate()
 }
