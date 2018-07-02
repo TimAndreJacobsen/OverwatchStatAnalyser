@@ -3,16 +3,13 @@ package com.overwatch.statistics;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 
 public class App extends Application {
 
@@ -31,7 +28,6 @@ public class App extends Application {
 
         // initializing
         ui.initialize();
-        LineChart chart = ui.generateLineChart();
 
         // Adding all elements
         root.setTop(addHBox(root));
@@ -40,21 +36,26 @@ public class App extends Application {
         primaryStage.show();
     }
 
-    private HBox addHBox(BorderPane root, LineChart chart) {
+    private HBox addHBox(BorderPane root) {
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(15, 12, 15, 12));
         hbox.setSpacing(10);
-        hbox.setStyle("-fx-background-color: #336699;");
+        hbox.setStyle("-fx-background-color: #205090;");
 
+        // Button 1 - LineChart
+        Button buttonShowLineChart = new Button();
+        buttonShowLineChart.setPrefSize(100, 20);
+        buttonShowLineChart.setText("Render Line Chart");
+        buttonShowLineChart.setOnAction(event -> renderLineChart(root));
 
-        // Button 1
-        Button btn = new Button();
-        btn.setPrefSize(100, 20);
-        btn.setText("Render chart");
-        btn.setOnAction(event -> root.setCenter(chart));
+        // Button 2 - BarChart
+        Button buttonShowBarChart = new Button();
+        buttonShowBarChart.setPrefSize(100, 20);
+        buttonShowBarChart.setText("Render Bar Chart");
+        buttonShowBarChart.setOnAction(event -> renderBarChart(root));
 
-
-        hbox.getChildren().addAll(btn);
+        // Add all elements to HXBox - Top of screen
+        hbox.getChildren().addAll(buttonShowLineChart, buttonShowBarChart);
 
         return hbox;
     }
@@ -64,5 +65,9 @@ public class App extends Application {
         root.setCenter(lineChart);
     }
 
+    private void renderBarChart(BorderPane root) {
+        BarChart barChart = ui.generateBarChart();
+        root.setCenter(barChart);
+    }
 
 }
