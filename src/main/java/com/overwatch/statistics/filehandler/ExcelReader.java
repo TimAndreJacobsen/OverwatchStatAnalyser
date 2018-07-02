@@ -26,8 +26,8 @@ public class ExcelReader {
     //EFFECTS : loads the workbook into memory
     public ExcelReader() throws IOException {
         System.out.println("loading file...");
-        this.workbook = new XSSFWorkbook(new FileInputStream("C:/Users/Desktop/Desktop/OverwatchS10.xlsx"));
-        System.out.println("file loaded");
+        this.workbook = new XSSFWorkbook(new FileInputStream("C:/Users/Desktop/Desktop/div/OverwatchS11.xlsx"));
+        System.out.println("file loaded successfully - Constructor");
     }
 
     // Getters
@@ -53,18 +53,16 @@ public class ExcelReader {
 
         for (Row row : sheet1) {
             if (row.getRowNum() == 0) {
-                continue; //just skip the row if row number is 0, row number 0 only contains text headers
+                continue; //just skip the row if row number is 0, row number 0 contains text headers
             }
             gameRounds.add(new GameRound());
 
             for (Cell cell : row) {
-                System.out.println("Cell Address: " + cell.getAddress());
                 String text = formatter.formatCellValue(cell);
                 int rowIndex = row.getRowNum() - 1;
 
                 switch (cell.getColumnIndex()) {
                     case 0:
-                        System.out.println();
                         gameRounds.get(rowIndex).setSkillRating(Integer.parseInt(text));
                         break;
                     case 1:
@@ -72,13 +70,6 @@ public class ExcelReader {
                             if (text.equalsIgnoreCase(c.getName())) {
                                 gameRounds.get(rowIndex).setChampion(c);
                                 break;
-                            } else { // If champion is not mentioned in the list, assign it to other
-                                for (Champion other : champions) {
-                                    if (other.getName().equals("Other")) {
-                                        gameRounds.get(rowIndex).setChampion(other);
-                                        break;
-                                    }
-                                }
                             }
                         }
                         break;
@@ -93,6 +84,7 @@ public class ExcelReader {
                         for (Map m : maps) {
                             if (text.equalsIgnoreCase(m.getName())) {
                                 gameRounds.get(rowIndex).setMap(m);
+                                break;
                             }
                         }
                     case 5:
@@ -103,6 +95,7 @@ public class ExcelReader {
                         break;
                 }
             }
+            System.out.println(gameRounds.size());
         }
     }
 }
