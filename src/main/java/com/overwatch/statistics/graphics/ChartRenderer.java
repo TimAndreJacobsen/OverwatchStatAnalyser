@@ -54,6 +54,9 @@ public class ChartRenderer {
         barChart.setTitle("Win Rate of Champions by Map");
 
         for (Champion c : champions) {
+            if (!c.getRole().equals("Support")) {
+                continue; // Trimming away champions that are not supports
+            }
             XYChart.Series seriesBuffer = new XYChart.Series();
             seriesBuffer.setName(c.getName());
 
