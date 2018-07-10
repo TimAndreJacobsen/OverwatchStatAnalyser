@@ -3,6 +3,7 @@ package com.overwatch.statistics.gameround.model;
 import java.util.HashSet;
 import java.util.Set;
 
+
 public class Maps {
 
     private Set<Map> maps = new HashSet<>();
@@ -19,13 +20,14 @@ public class Maps {
     private Map route66 = new Map("Route 66", "Payload");
     private Map templeOfAnubis = new Map("Temple of Anubis", "2 Capture Points");
     private Map volskayaIndustries = new Map("Volskaya Industries", "2 Capture Points");
+    private Map numbani = new Map("Numbani", "Hybrid Payload");
 
     // Getters
     public Set<Map> getMaps() {
         return maps;
     }
 
-    // Populate maps set
+    // Populate map set
     public void addMapsToList() {
         maps.add(blizzardWorld);
         maps.add(dorado);
@@ -40,6 +42,7 @@ public class Maps {
         maps.add(route66);
         maps.add(templeOfAnubis);
         maps.add(volskayaIndustries);
+        maps.add(numbani);
     }
 
 }
