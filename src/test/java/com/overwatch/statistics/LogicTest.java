@@ -145,5 +145,7 @@ public class LogicTest {
         assertEquals(0.5, c1.getWinRateEachMap().get(map2), 0.001);
         assertEquals(0.0, c2.getWinRateEachMap().get(map1), 0.001);
         assertEquals(0.333, c2.getWinRateEachMap().get(map2), 0.001);
+        assertEquals(0.0, c3.getWinRateEachMap().get(map1), 0.001);
+        assertEquals(0.0, c4.getWinRateEachMap().get(map2), 0.001);
     }
 }
