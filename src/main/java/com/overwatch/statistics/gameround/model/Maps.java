@@ -21,6 +21,9 @@ public class Maps {
     private Map templeOfAnubis = new Map("Temple of Anubis", "2 Capture Points");
     private Map volskayaIndustries = new Map("Volskaya Industries", "2 Capture Points");
     private Map numbani = new Map("Numbani", "Hybrid Payload");
+    private Map hollywood = new Map("Hollywood", "Hybrid Payload");
+    private Map ilios = new Map("Ilios", "King of the Hill");
+
 
     // Getters
     public Set<Map> getMaps() {
@@ -43,6 +46,8 @@ public class Maps {
         maps.add(templeOfAnubis);
         maps.add(volskayaIndustries);
         maps.add(numbani);
+        maps.add(hollywood);
+        maps.add(ilios);
     }
 
 }

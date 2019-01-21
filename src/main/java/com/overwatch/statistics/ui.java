@@ -28,6 +28,20 @@ public class ui {
         readExcelWorkBook();        // Load data into excelReader
         initLogic();        // Initialize logic & load game data
         computeData();        // Calculate Champion data
+        //printData();
+    }
+
+    public void printData() {
+        for (Champion c : championRoster.getChampions()) {
+            String winRateByMap = "";
+            System.out.println("Champion: " + c.getName());
+            for (Map m : maps.getMaps()) {
+                winRateByMap += m.getName() + ": " + c.getWinRateEachMap().get(m).toString() + "\n";
+                System.out.print(winRateByMap);
+                winRateByMap = "";
+            }
+            System.out.println();
+        }
     }
 
     protected LineChart generateLineChart() {

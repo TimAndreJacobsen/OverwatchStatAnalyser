@@ -95,7 +95,6 @@ public class ExcelReader {
                         break;
                 }
             }
-            System.out.println(gameRounds.size());
         }
     }
 }

@@ -32,7 +32,7 @@ public class App extends Application {
         // Adding all elements
         root.setTop(addHBox(root));
 
-        primaryStage.setScene(new Scene(root, 900, 720));
+        primaryStage.setScene(new Scene(root, 1600, 720));
         primaryStage.show();
     }
 
