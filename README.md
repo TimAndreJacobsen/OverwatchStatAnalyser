@@ -1,4 +1,4 @@
-# Overwatch Stat Analyser - A tool for analysing your Overwatch data
+# Overwatch Stat Analyser - A tool for analysing your data
 
 #### So you are writing down the results of your game to get a better understanding of your performance on different champions and maps. 
 
