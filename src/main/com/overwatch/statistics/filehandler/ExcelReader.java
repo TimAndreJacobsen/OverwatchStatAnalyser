@@ -20,15 +20,15 @@ public class ExcelReader {
     private ArrayList<GameRound> gameRounds = new ArrayList<>();
     private Set<Champion> champions;
     private Set<Map> maps;
-    private String path;
+    private final String PATH;
 
     // REQUIRES: .xlsx document at correct path
     // MODIFIES: this
     // EFFECTS : Initializes Workbook and reads document
     public ExcelReader() throws IOException {
-        path = "C:/Users/Desktop/Desktop/div/OverwatchS11.xlsx";
-        System.out.println("loading file:" + path);
-        this.workbook = new XSSFWorkbook(new FileInputStream(path));
+        PATH = "C:/Users/Desktop/Desktop/div/OverwatchS11.xlsx";
+        System.out.println("loading file:" + PATH);
+        this.workbook = new XSSFWorkbook(new FileInputStream(PATH));
         System.out.println("file loaded");
 
     }
