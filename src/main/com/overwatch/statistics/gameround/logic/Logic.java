@@ -65,7 +65,7 @@ public class Logic {
         return (double) roundsWon / roundsPlayed;
     }
 
-    public void calculateWinRateEachMapAllChampions(Set<Champion> champions, Set<Map> maps, List<GameRound> gameRounds) {
+    public void calculateWinRates(Set<Champion> champions, Set<Map> maps, List<GameRound> gameRounds) {
         for (Champion c : champions) {
 
             for (Map m : maps) {

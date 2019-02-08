@@ -20,12 +20,15 @@ public class ui {
     private Maps maps = new Maps();
     private ChampionRoster championRoster = new ChampionRoster();
 
-    protected void initialize() {
-        initializeReader();        // Initialize Reader
-        populateModels();        // Initialize Map and Champion types
-        readExcelWorkBook();        // Load data into excelReader
-        initLogic();        // Initialize logic & load game data
-        computeData();        // Calculate Champion data
+    protected void run() {
+        System.out.println("initializing");
+        initializeReader();
+        System.out.println("populating models");
+        populateModels();
+        loadData();
+        parseFile();
+        initializeLogic();
+        computeData();
     }
 
     protected LineChart generateLineChart() {
@@ -39,14 +42,12 @@ public class ui {
     }
 
     private void initializeReader() {
-        System.out.println("initializing reader");
         try {
             excelReader = new ExcelReader();
         } catch (IOException e) {
             System.out.println("File not found...");
             e.printStackTrace();
         }
-        System.out.println("file loaded successfully");
     }
 
     private void populateModels() {
@@ -55,24 +56,25 @@ public class ui {
         championRoster.addChampionsToList();
     }
 
-    private void readExcelWorkBook() {
+    private void loadData() {
         // Load data
         excelReader.setMaps(maps.getMaps());
         excelReader.setChampions(championRoster.getChampions());
+    }
 
-        // Parse .xlsx file to ArrayList
+    private void parseFile() {
         excelReader.readWorkbook();
         gameRounds = excelReader.getGameRounds();
     }
 
-    private void initLogic() {
+    private void initializeLogic() {
         logic = new Logic();
     }
 
     private void computeData() {
         logic.calculateSkillRatingChange(gameRounds);
         logic.calculateTotalWinRate(championRoster.getChampions(), gameRounds);
-        logic.calculateWinRateEachMapAllChampions(championRoster.getChampions(), maps.getMaps(), gameRounds);
+        logic.calculateWinRates(championRoster.getChampions(), maps.getMaps(), gameRounds);
     }
 
   }

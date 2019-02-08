@@ -18,6 +18,7 @@ public class ChartRenderer {
     }
 
     //TODO: Create overloaded methods to be able to generate charts for all possible values?
+    //TODO: Or possible to create a general function that accepts configuration params
     public LineChart<String, Number> getSkillOverRoundsPlayed() {
         // initializing and labeling the X and Y axis
         CategoryAxis xAxis = new CategoryAxis();
@@ -27,6 +28,7 @@ public class ChartRenderer {
 
         // initializing chart and a data series
         LineChart chart = new LineChart<>(xAxis, yAxis);
+        chart.setTitle("Skill Rating over time");
         XYChart.Series<String, Number> series = new XYChart.Series<>();
 
         // Initializing variables to be used in the for each loop
@@ -66,5 +68,9 @@ public class ChartRenderer {
             barChart.getData().add(seriesBuffer);
         }
         return barChart;
+    }
+
+    public BarChart getSingleChampionBarChart(Champion champ, Set<Map> maps, String optionOne, String OptionTwo){
+        return null;
     }
 }

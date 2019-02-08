@@ -20,14 +20,17 @@ public class ExcelReader {
     private ArrayList<GameRound> gameRounds = new ArrayList<>();
     private Set<Champion> champions;
     private Set<Map> maps;
+    private final String PATH;
 
-    //REQUIRES: .xlsx document in correct hardcoded os address
-    //MODIFIES: this
-    //EFFECTS : loads the workbook into memory
+    // REQUIRES: .xlsx document at correct path
+    // MODIFIES: this
+    // EFFECTS : Initializes Workbook and reads document
     public ExcelReader() throws IOException {
-        System.out.println("loading file...");
-        this.workbook = new XSSFWorkbook(new FileInputStream("C:/Users/Desktop/Desktop/div/OverwatchS11.xlsx"));
-        System.out.println("file loaded successfully - Constructor");
+        PATH = "C:/Users/Desktop/Desktop/div/OverwatchS11.xlsx";
+        System.out.println("loading file:" + PATH);
+        this.workbook = new XSSFWorkbook(new FileInputStream(PATH));
+        System.out.println("file loaded");
+
     }
 
     // Getters
@@ -43,17 +46,16 @@ public class ExcelReader {
         this.maps = maps;
     }
 
-    //TODO: refactor parts of this method. Currently its both reading and assigning, can this be split up into smaller components?
-    //REQUIRES: workbook set through class constructor
-    //MODIFIES: GameRound objects, gameRounds list
-    //EFFECTS : iterates over cells and stores values into gameSession Objects. Creating new
+    // REQUIRES: Workbook initialized, Workbook has read file
+    // MODIFIES: gameRounds
+    // EFFECTS : parses file and populates gameRounds with data
     public void readWorkbook() {
         DataFormatter formatter = new DataFormatter();
-        Sheet sheet1 = workbook.getSheetAt(0);
+        Sheet sheet = workbook.getSheetAt(0);
 
-        for (Row row : sheet1) {
+        for (Row row : sheet) {
             if (row.getRowNum() == 0) {
-                continue; //just skip the row if row number is 0, row number 0 contains text headers
+                continue; // Row 0 contains table headers
             }
             gameRounds.add(new GameRound());
 
@@ -62,10 +64,11 @@ public class ExcelReader {
                 int rowIndex = row.getRowNum() - 1;
 
                 switch (cell.getColumnIndex()) {
-                    case 0:
+
+                    case 0: // Current Skill Rating
                         gameRounds.get(rowIndex).setSkillRating(Integer.parseInt(text));
                         break;
-                    case 1:
+                    case 1: // Champion Name
                         for (Champion c : champions) {
                             if (text.equalsIgnoreCase(c.getName())) {
                                 gameRounds.get(rowIndex).setChampion(c);
@@ -73,29 +76,30 @@ public class ExcelReader {
                             }
                         }
                         break;
-                    case 2:
+                    case 2: // Win or Loss
                         if (text.equalsIgnoreCase("win")) {
                             gameRounds.get(rowIndex).setIsWin(true);
                         } else {
                             gameRounds.get(rowIndex).setIsWin(false);
                             break;
                         }
-                    case 3:
+                    case 3: // Map
                         for (Map m : maps) {
                             if (text.equalsIgnoreCase(m.getName())) {
                                 gameRounds.get(rowIndex).setMap(m);
                                 break;
                             }
                         }
-                    case 5:
+                    case 5: // Date
                         gameRounds.get(rowIndex).setDate(text);
                         break;
-                    case 6:
+                    case 6: // Music or Game Audio
                         gameRounds.get(rowIndex).setAudioType(text);
                         break;
                 }
             }
-            System.out.println(gameRounds.size());
         }
+        System.out.print("Total games: ");
+        System.out.println(gameRounds.size());
     }
 }
