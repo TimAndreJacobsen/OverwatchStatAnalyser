@@ -44,14 +44,14 @@ public class App extends Application {
 
         // Button 1 - LineChart
         Button buttonShowLineChart = new Button();
-        buttonShowLineChart.setPrefSize(100, 20);
-        buttonShowLineChart.setText("Render Line Chart");
+        buttonShowLineChart.setPrefSize(200, 20);
+        buttonShowLineChart.setText("Skill rating");
         buttonShowLineChart.setOnAction(event -> renderLineChart(root));
 
         // Button 2 - BarChart
         Button buttonShowBarChart = new Button();
-        buttonShowBarChart.setPrefSize(100, 20);
-        buttonShowBarChart.setText("Render Bar Chart");
+        buttonShowBarChart.setPrefSize(200, 20);
+        buttonShowBarChart.setText("Support win rate by map");
         buttonShowBarChart.setOnAction(event -> renderBarChart(root));
 
         // Add all elements to HXBox - Top of screen
