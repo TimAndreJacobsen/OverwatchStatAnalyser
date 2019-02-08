@@ -139,7 +139,7 @@ public class LogicTest {
         gameRounds.add(r8);
         gameRounds.add(r9);
 
-        logic.calculateWinRateEachMapAllChampions(champions,maps,gameRounds);
+        logic.calculateWinRates(champions,maps,gameRounds);
 
         assertEquals(1.0, c1.getWinRateEachMap().get(map1), 0.001);
         assertEquals(0.5, c1.getWinRateEachMap().get(map2), 0.001);
