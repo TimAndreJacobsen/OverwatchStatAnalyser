@@ -22,12 +22,8 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Overwatch Statistical analysis utility");
-
-        // Layout
         BorderPane root = new BorderPane();
-
-        // initializing
-        ui.initialize();
+        ui.run();
 
         // Adding all elements
         root.setTop(addHBox(root));
