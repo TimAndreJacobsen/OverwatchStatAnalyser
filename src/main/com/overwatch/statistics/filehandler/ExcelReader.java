@@ -27,9 +27,10 @@ public class ExcelReader {
     // EFFECTS : Initializes Workbook and reads document
     public ExcelReader() throws IOException {
         path = "C:/Users/Desktop/Desktop/div/OverwatchS11.xlsx";
-        System.out.println("loading file...");
+        System.out.println("loading file:" + path);
         this.workbook = new XSSFWorkbook(new FileInputStream(path));
-        System.out.println("file loaded successfully - Constructor");
+        System.out.println("file loaded");
+
     }
 
     // Getters
@@ -98,7 +99,7 @@ public class ExcelReader {
                 }
             }
         }
-        System.out.print("Amount of game rounds loaded: ");
+        System.out.print("Total games: ");
         System.out.println(gameRounds.size());
     }
 }
