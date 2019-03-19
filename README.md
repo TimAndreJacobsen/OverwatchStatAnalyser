@@ -4,9 +4,16 @@
 
 What is strongest hero for every map? Strongest Role? Whats your skill rating over time?
 
-This is a java application that parses an Excel file(.xlsx) and generates graphs and percentages for specific hero's, maps, roles and more.
+This is a java application that reads an Excel file(.xlsx) and generates graphs and percentages for specific hero's, maps, roles and more.
+![example-dataset](https://github.com/TimAndreJacobsen/OverwatchStatAnalyser/blob/master/assets/dataset.PNG)
 
 Renders graphs and allows you to filter which parameters you want to measure.
+
+Skill rating over games played
+![skill-rating-graph-ui](https://github.com/TimAndreJacobsen/OverwatchStatAnalyser/blob/master/assets/sr-over-time.PNG)
+
+Chapmion performance sorted on role: support over all maps
+![support-win-rate-over-map](https://github.com/TimAndreJacobsen/OverwatchStatAnalyser/blob/master/assets/role-win-rate-over-map.PNG)
 
 #### Libraries: JavaFX, Apache POI, JUnit4
 
