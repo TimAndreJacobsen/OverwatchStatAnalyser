@@ -112,4 +112,19 @@ public class ChampionRoster {
         return championRoleSelection;
     }
 
+    public Set<Map> getMapsByType(String map){
+        Set<Map> mapTypeSelection = new HashSet<>();
+
+        if (map != null && map.equals("All Maps")) {
+            for (Map m : getMaps()) {
+                if (m.getType().equals(map)){
+                    mapTypeSelection.add(m);
+                }
+            }
+        } else {
+            mapTypeSelection = getMaps();
+        }
+        return mapTypeSelection;
+    }
+
 }
