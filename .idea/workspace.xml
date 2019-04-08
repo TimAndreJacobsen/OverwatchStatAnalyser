@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
     <list default="true" id="484b9023-bfef-47d2-afea-e836d7a5649c" name="Default" comment="implemented barchart Hero win rate over map">
+      <change beforePath="$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java" afterDir="false" />
     </list>
-    <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,28 +23,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+            <state relative-caret-position="330">
+              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
               <folding>
                 <element signature="method#start#0;class#App#0" />
-                <element signature="method#addHBox#0;class#App#0" />
-                <element signature="e#2103#2219#0" />
+                <element signature="e#2101#2217#0" />
                 <element signature="method#renderLineChart#0;class#App#0" />
-                <element signature="method#renderBarChart#0;class#App#0" />
-                <element signature="method#renderBarChartOnSelection#0;class#App#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChartRenderer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChartRenderer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#453#454#0" expanded="true" />
@@ -168,12 +166,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Champion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/App.java" />
-        <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/filehandler/ExcelReader.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java" />
+        <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java" />
       </list>
     </option>
   </component>
@@ -1347,17 +1345,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="264">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="method#start#0;class#App#0" />
-            <element signature="method#addHBox#0;class#App#0" />
-            <element signature="e#2103#2219#0" />
-            <element signature="method#renderLineChart#0;class#App#0" />
-            <element signature="method#renderBarChart#0;class#App#0" />
-            <element signature="method#renderBarChartOnSelection#0;class#App#0" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1379,13 +1373,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="330">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
           <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
+            <element signature="method#start#0;class#App#0" />
+            <element signature="e#2101#2217#0" />
+            <element signature="method#renderLineChart#0;class#App#0" />
           </folding>
         </state>
       </provider>

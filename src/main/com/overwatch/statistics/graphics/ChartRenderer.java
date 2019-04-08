@@ -16,7 +16,7 @@ public class ChartRenderer {
     public ChartRenderer(List<GameRound> gameRounds) {
         this.gameRounds = gameRounds;
     }
-    
+
     public LineChart<String, Number> renderSkillRating() {
         // initializing and labeling the X and Y axis
         CategoryAxis xAxis = new CategoryAxis();

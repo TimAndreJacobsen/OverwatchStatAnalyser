@@ -43,14 +43,15 @@ public class App extends Application {
         // Button 1 - LineChart
         Button buttonShowLineChart = new Button();
         buttonShowLineChart.setPrefSize(200, 20);
-        buttonShowLineChart.setText("Skill rating");
+        buttonShowLineChart.setText("Skill Rating");
         buttonShowLineChart.setOnAction(event -> renderLineChart(root));
 
+
         // Button 2 - BarChart
-        Button buttonShowBarChart = new Button();
-        buttonShowBarChart.setPrefSize(200, 20);
-        buttonShowBarChart.setText("Support win rate by map");
-        buttonShowBarChart.setOnAction(event -> renderBarChart(root));
+        Button RenderChartByRole = new Button();
+        RenderChartByRole.setPrefSize(200, 20);
+        RenderChartByRole.setText("Render");
+        RenderChartByRole.setOnAction(event -> renderBarChartOnSelection(root));
 
         // Dropdown 1 - ComboBox - Role selection
         ComboBox roleSelectionComboBox = new ComboBox();
@@ -67,15 +68,8 @@ public class App extends Application {
         });
         roleSelectionComboBox.setValue("Pick a role");
 
-        // Button 3 - BarChart
-        Button RenderChartByRole = new Button();
-        RenderChartByRole.setPrefSize(200, 20);
-        RenderChartByRole.setText("win% for role");
-        RenderChartByRole.setOnAction(event -> renderBarChartOnSelection(root));
-
-
         // Add all elements to HXBox - Top of screen
-        hbox.getChildren().addAll(roleSelectionComboBox, buttonShowLineChart, buttonShowBarChart, RenderChartByRole);
+        hbox.getChildren().addAll(roleSelectionComboBox, buttonShowLineChart, RenderChartByRole);
 
         return hbox;
     }
@@ -83,11 +77,6 @@ public class App extends Application {
     private void renderLineChart(BorderPane root) {
         LineChart lineChart = ui.generateLineChart();
         root.setCenter(lineChart);
-    }
-
-    private void renderBarChart(BorderPane root) {
-        BarChart barChart = ui.generateBarChart("All Roles");
-        root.setCenter(barChart);
     }
 
     private void renderBarChartOnSelection(BorderPane root) {
