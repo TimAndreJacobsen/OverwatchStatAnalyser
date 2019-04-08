@@ -58,7 +58,6 @@ public class ChampionRoster {
 
     // populate Champions set
     public void addChampionsToList() {
-
         // supports
         champions.add(ana);
         champions.add(brigitte);
@@ -98,17 +97,15 @@ public class ChampionRoster {
         champions.add(other);
     }
 
-    private void supportChampions() {
+    public Set<Champion> getSupportChampions(String role) {
+        Set<Champion> championRoleSelection = null;
 
+        for (Champion c : champions) {
+            if (c.getRole().equals(role)){
+                championRoleSelection.add(c);
+            }
+        }
+        return championRoleSelection;
     }
 
-
-    private void tankChampions() {
-
-    }
-
-
-    private void dpsChampions() {
-
-    }
 }
