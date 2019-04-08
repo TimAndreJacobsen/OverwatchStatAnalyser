@@ -63,13 +63,19 @@ public class App extends Application {
         roleSelectionComboBox.setPromptText("Champion Role");
         roleSelectionComboBox.setEditable(true);
         roleSelectionComboBox.setOnAction((Event ev) -> {
-            role =  roleSelectionComboBox.getSelectionModel().getSelectedItem().toString();
+            role = roleSelectionComboBox.getSelectionModel().getSelectedItem().toString();
         });
         roleSelectionComboBox.setValue("Pick a role");
 
+        // Button 3 - BarChart
+        Button RenderChartByRole = new Button();
+        RenderChartByRole.setPrefSize(200, 20);
+        RenderChartByRole.setText("win% for role");
+        RenderChartByRole.setOnAction(event -> renderBarChartOnSelection(root));
+
 
         // Add all elements to HXBox - Top of screen
-        hbox.getChildren().addAll(roleSelectionComboBox, buttonShowLineChart, buttonShowBarChart);
+        hbox.getChildren().addAll(roleSelectionComboBox, buttonShowLineChart, buttonShowBarChart, RenderChartByRole);
 
         return hbox;
     }
@@ -84,8 +90,8 @@ public class App extends Application {
         root.setCenter(barChart);
     }
 
-    private void renderBarChartOnSelection(BorderPane root, String role) {
-        BarChart barChart = ui.generateBarChart(role);
+    private void renderBarChartOnSelection(BorderPane root) {
+        BarChart barChart = ui.generateBarChartNEW(role);
         root.setCenter(barChart);
     }
 
