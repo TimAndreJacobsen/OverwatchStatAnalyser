@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="484b9023-bfef-47d2-afea-e836d7a5649c" name="Default" comment="implemented barchart Hero win rate over map">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java" afterDir="false" />
     </list>
     <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ui.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ui.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+            <state relative-caret-position="594">
+              <caret line="40" column="66" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
               <folding>
                 <element signature="method#generateLineChart#0;class#ui#0" />
                 <element signature="method#initializeReader#0;class#ui#0" />
@@ -118,13 +117,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChampionRoster.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChampionRoster.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="321">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,10 +195,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Champion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/App.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/filehandler/ExcelReader.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java" />
+        <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java" />
       </list>
     </option>
   </component>
@@ -1292,16 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/logic/Logic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
@@ -1345,11 +1336,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        <state relative-caret-position="594">
+          <caret line="40" column="66" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
           <folding>
             <element signature="method#generateLineChart#0;class#ui#0" />
             <element signature="method#initializeReader#0;class#ui#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
           </folding>
         </state>
       </provider>
