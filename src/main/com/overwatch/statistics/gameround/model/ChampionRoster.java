@@ -98,12 +98,16 @@ public class ChampionRoster {
     }
 
     public Set<Champion> getChampionsByRole(String role) {
-        Set<Champion> championRoleSelection = null;
+        Set<Champion> championRoleSelection = new HashSet<>();
 
-        for (Champion c : champions) {
-            if (c.getRole().equals(role)){
-                championRoleSelection.add(c);
+        if (role != null && !role.equals("All Roles")) {
+            for (Champion c : champions) {
+                if (c.getRole().equals(role)){
+                    championRoleSelection.add(c);
+                }
             }
+        } else {
+            championRoleSelection = getChampions();
         }
         return championRoleSelection;
     }
