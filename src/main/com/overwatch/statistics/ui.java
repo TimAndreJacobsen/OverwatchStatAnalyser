@@ -26,7 +26,7 @@ public class ui {
         System.out.println("populating models");
         populateModels();
         loadData();
-        parseFile();
+        readFile();
         initializeLogic();
         computeData();
     }
@@ -62,7 +62,7 @@ public class ui {
         excelReader.setChampions(championRoster.getChampions());
     }
 
-    private void parseFile() {
+    private void readFile() {
         excelReader.readWorkbook();
         gameRounds = excelReader.getGameRounds();
     }
