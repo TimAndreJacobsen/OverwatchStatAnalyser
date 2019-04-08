@@ -56,13 +56,16 @@ public class ChartRenderer {
         barChart.setTitle("Win Rate of Champions by Map");
 
         for (Champion c : champions) {
-            if (!c.getRole().equals("Support")) {
-                continue; // Trimming away champions that are not supports
+            if (c.getTotalWinRate() == 0.0) {
+                continue; // Trimming away champions that have no data
             }
             XYChart.Series seriesBuffer = new XYChart.Series();
             seriesBuffer.setName(c.getName());
 
             for (Map m : maps) {
+                if (c.getWinRateEachMap().get(m) == 0.0) {
+                    continue;
+                }
                 seriesBuffer.getData().add(new XYChart.Data(m.getName(), c.getWinRateEachMap().get(m)));
             }
             barChart.getData().add(seriesBuffer);
