@@ -42,7 +42,7 @@ public class ChampionRoster {
     }
 
     // populate Champions set
-    private void addChampionsToList() {
+    public void addChampionsToList() {
 
         // supports
         champions.add(ana);
@@ -55,17 +55,30 @@ public class ChampionRoster {
 
         // tanks
         champions.add(reinhardt);
+        champions.add(dva);
+        champions.add(orisa);
+        champions.add(roadhog);
         champions.add(winston);
         champions.add(wreckingBall);
         champions.add(zarya);
+
+        // dps
+
 
         champions.add(other);
     }
 
     private void supportChampions() {
 
+    }
+
+
     private void tankChampions() {
 
     }
+
+
+    private void dpsChampions() {
+
     }
 }
