@@ -97,7 +97,7 @@ public class ChampionRoster {
         champions.add(other);
     }
 
-    public Set<Champion> getSupportChampions(String role) {
+    public Set<Champion> getChampionsByRole(String role) {
         Set<Champion> championRoleSelection = null;
 
         for (Champion c : champions) {
