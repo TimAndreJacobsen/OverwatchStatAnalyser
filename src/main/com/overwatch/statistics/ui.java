@@ -41,6 +41,11 @@ public class ui {
         return barChart.getSupportWinRateByMap(championRoster.getChampions(), maps.getMaps());
     }
 
+    public BarChart generateBarChartNEW(String role) {
+        ChartRenderer barChart = new ChartRenderer(gameRounds);
+        return barChart.getSupportWinRateByMap(championRoster.getChampionsByRole(role), maps.getMaps());
+    }
+
     private void initializeReader() {
         try {
             excelReader = new ExcelReader();
@@ -77,4 +82,4 @@ public class ui {
         logic.calculateWinRates(championRoster.getChampions(), maps.getMaps(), gameRounds);
     }
 
-  }
+}
