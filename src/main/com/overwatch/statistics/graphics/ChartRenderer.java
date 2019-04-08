@@ -64,7 +64,7 @@ public class ChartRenderer {
 
             for (Map m : maps) {
                 if (c.getWinRateEachMap().get(m) == 0.0) {
-                    continue;
+                    continue; // Trimming away maps that have no data
                 }
                 seriesBuffer.getData().add(new XYChart.Data(m.getName(), c.getWinRateEachMap().get(m)));
             }
@@ -73,7 +73,4 @@ public class ChartRenderer {
         return barChart;
     }
 
-    public BarChart getSingleChampionBarChart(Champion champ, Set<Map> maps, String optionOne, String OptionTwo){
-        return null;
-    }
 }

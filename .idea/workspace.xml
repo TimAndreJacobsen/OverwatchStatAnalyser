@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
     <list default="true" id="484b9023-bfef-47d2-afea-e836d7a5649c" name="Default" comment="implemented barchart Hero win rate over map">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java" afterDir="false" />
     </list>
+    <list id="55aa5691-b194-4a05-95fc-07b8b4b6bfb5" name="added getters and setters" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +42,8 @@
       <file leaf-file-name="ChartRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+            <state relative-caret-position="748">
+              <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
               <folding>
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#453#454#0" expanded="true" />
@@ -893,7 +892,7 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5021322" side_tool="true" weight="0.46732026" />
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32995737" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.4978678" weight="0.46732026" />
-      <window_info anchor="right" id="Run" order="9" sideWeight="0.4989339" weight="0.31979167" />
+      <window_info active="true" anchor="right" id="Run" order="9" sideWeight="0.4989339" visible="true" weight="0.31979167" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32897604" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
@@ -1383,8 +1382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        <state relative-caret-position="748">
+          <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
           <folding>
             <element signature="e#409#410#0" expanded="true" />
             <element signature="e#453#454#0" expanded="true" />
