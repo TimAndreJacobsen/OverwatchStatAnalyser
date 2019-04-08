@@ -17,9 +17,7 @@ public class ChartRenderer {
         this.gameRounds = gameRounds;
     }
 
-    //TODO: Create overloaded methods to be able to generate charts for all possible values?
-    //TODO: Or possible to create a general function that accepts configuration params
-    public LineChart<String, Number> getSkillOverRoundsPlayed() {
+    public LineChart<String, Number> renderSkillRating() {
         // initializing and labeling the X and Y axis
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Time ->");
@@ -47,7 +45,7 @@ public class ChartRenderer {
         return chart;
     }
 
-    public BarChart getSupportWinRateByMap(Set<Champion> champions, Set<Map> maps) {
+    public BarChart renderBarChart(Set<Champion> champions, Set<Map> maps) {
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Map Name");
         NumberAxis yAxis = new NumberAxis();
@@ -56,13 +54,16 @@ public class ChartRenderer {
         barChart.setTitle("Win Rate of Champions by Map");
 
         for (Champion c : champions) {
-            if (!c.getRole().equals("Support")) {
-                continue; // Trimming away champions that are not supports
+            if (c.getTotalWinRate() == 0.0) {
+                continue; // Trimming away champions that have no data
             }
             XYChart.Series seriesBuffer = new XYChart.Series();
             seriesBuffer.setName(c.getName());
 
             for (Map m : maps) {
+                if (c.getWinRateEachMap().get(m) == 0.0) {
+                    continue; // Trimming away maps that have no data
+                }
                 seriesBuffer.getData().add(new XYChart.Data(m.getName(), c.getWinRateEachMap().get(m)));
             }
             barChart.getData().add(seriesBuffer);
@@ -70,7 +71,4 @@ public class ChartRenderer {
         return barChart;
     }
 
-    public BarChart getSingleChampionBarChart(Champion champ, Set<Map> maps, String optionOne, String OptionTwo){
-        return null;
-    }
 }

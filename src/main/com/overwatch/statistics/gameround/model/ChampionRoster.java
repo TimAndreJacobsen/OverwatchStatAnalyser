@@ -98,14 +98,33 @@ public class ChampionRoster {
     }
 
     public Set<Champion> getChampionsByRole(String role) {
-        Set<Champion> championRoleSelection = null;
+        Set<Champion> championRoleSelection = new HashSet<>();
 
-        for (Champion c : champions) {
-            if (c.getRole().equals(role)){
-                championRoleSelection.add(c);
+        if (role != null && !role.equals("All Roles")) {
+            for (Champion c : champions) {
+                if (c.getRole().equals(role)){
+                    championRoleSelection.add(c);
+                }
             }
+        } else {
+            championRoleSelection = getChampions();
         }
         return championRoleSelection;
+    }
+
+    public Set<Map> getMapsByType(String map){
+        Set<Map> mapTypeSelection = new HashSet<>();
+
+        if (map != null && map.equals("All Maps")) {
+            for (Map m : getMaps()) {
+                if (m.getType().equals(map)){
+                    mapTypeSelection.add(m);
+                }
+            }
+        } else {
+            mapTypeSelection = getMaps();
+        }
+        return mapTypeSelection;
     }
 
 }

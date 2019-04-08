@@ -33,17 +33,17 @@ public class ui {
 
     protected LineChart generateLineChart() {
         ChartRenderer lineChart = new ChartRenderer(gameRounds);
-        return lineChart.getSkillOverRoundsPlayed();
+        return lineChart.renderSkillRating();
     }
 
     protected BarChart generateBarChart(String role) {
         ChartRenderer barChart = new ChartRenderer(gameRounds);
-        return barChart.getSupportWinRateByMap(championRoster.getChampions(), maps.getMaps());
+        return barChart.renderBarChart(championRoster.getChampions(), maps.getMaps());
     }
 
     public BarChart generateBarChartNEW(String role) {
         ChartRenderer barChart = new ChartRenderer(gameRounds);
-        return barChart.getSupportWinRateByMap(championRoster.getChampionsByRole(role), maps.getMaps());
+        return barChart.renderBarChart(championRoster.getChampionsByRole(role), maps.getMaps());
     }
 
     private void initializeReader() {
