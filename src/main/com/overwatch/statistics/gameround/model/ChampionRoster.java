@@ -15,6 +15,17 @@ public class ChampionRoster {
     private Champion moira = new Champion("Moira", "Support", maps);
     private Champion brigitte = new Champion("Brigitte", "Support", maps);
     private Champion zenyatta = new Champion("Zenyatta", "Support", maps);
+
+    private Champion reinhardt = new Champion("Reinhardt", "Tank", maps);
+    private Champion dva = new Champion("D.Va", "Tank", maps);
+    private Champion orisa = new Champion("Orisa", "Tank", maps);
+    private Champion roadhog = new Champion("Roadhog", "Tank", maps);
+    private Champion winston = new Champion("Winston", "Tank", maps);
+    private Champion wreckingBall = new Champion("Wrecking Ball", "Tank", maps);
+    private Champion zarya = new Champion("Zarya", "Tank", maps);
+
+
+
     private Champion other = new Champion("Other", "Other", maps);
 
     // Getters
@@ -41,12 +52,20 @@ public class ChampionRoster {
         champions.add(lucio);
         champions.add(mercy);
         champions.add(moira);
+
+        // tanks
+        champions.add(reinhardt);
+        champions.add(winston);
+        champions.add(wreckingBall);
+        champions.add(zarya);
+
         champions.add(other);
     }
 
     private void supportChampions() {
-        champions.add(ana);
-        champions.add(brigitte);
-        champions.add(zenyatta);
+
+    private void tankChampions() {
+
+    }
     }
 }
