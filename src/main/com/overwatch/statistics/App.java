@@ -1,11 +1,13 @@
 package com.overwatch.statistics;
 
 import javafx.application.Application;
+import javafx.event.Event;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -14,7 +16,7 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     private static ui ui = new ui();
-
+    private String role;
     public static void main(String[] args ) {
         launch(args);
     }
@@ -50,8 +52,30 @@ public class App extends Application {
         buttonShowBarChart.setText("Support win rate by map");
         buttonShowBarChart.setOnAction(event -> renderBarChart(root));
 
+        // Dropdown 1 - ComboBox - Role selection
+        ComboBox roleSelectionComboBox = new ComboBox();
+        roleSelectionComboBox.getItems().addAll(
+                "Support",
+                "Tank",
+                "DPS",
+                "All Roles"
+        );
+        roleSelectionComboBox.setPromptText("Champion Role");
+        roleSelectionComboBox.setEditable(true);
+        roleSelectionComboBox.setOnAction((Event ev) -> {
+            role = roleSelectionComboBox.getSelectionModel().getSelectedItem().toString();
+        });
+        roleSelectionComboBox.setValue("Pick a role");
+
+        // Button 3 - BarChart
+        Button RenderChartByRole = new Button();
+        RenderChartByRole.setPrefSize(200, 20);
+        RenderChartByRole.setText("win% for role");
+        RenderChartByRole.setOnAction(event -> renderBarChartOnSelection(root));
+
+
         // Add all elements to HXBox - Top of screen
-        hbox.getChildren().addAll(buttonShowLineChart, buttonShowBarChart);
+        hbox.getChildren().addAll(roleSelectionComboBox, buttonShowLineChart, buttonShowBarChart, RenderChartByRole);
 
         return hbox;
     }
@@ -62,7 +86,12 @@ public class App extends Application {
     }
 
     private void renderBarChart(BorderPane root) {
-        BarChart barChart = ui.generateBarChart();
+        BarChart barChart = ui.generateBarChart("All Roles");
+        root.setCenter(barChart);
+    }
+
+    private void renderBarChartOnSelection(BorderPane root) {
+        BarChart barChart = ui.generateBarChartNEW(role);
         root.setCenter(barChart);
     }
 

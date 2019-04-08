@@ -34,16 +34,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ui.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ui.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="651">
+              <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
               <folding>
-                <element signature="method#generateLineChart#0;class#ui#0" />
-                <element signature="method#generateBarChart#0;class#ui#0" />
                 <element signature="method#initializeReader#0;class#ui#0" />
-                <element signature="method#parseFile#0;class#ui#0" />
+ 
               </folding>
             </state>
           </provider>
@@ -116,6 +114,9 @@
               <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+ 
               </folding>
             </state>
           </provider>
@@ -184,7 +185,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/graphics/ChartRenderer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/gameround/model/Champion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/overwatch/statistics/App.java" />
+        <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/filehandler/ExcelReader.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java" />
+        <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/ChampionRoster.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java" />
         <option value="$PROJECT_DIR$/src/main/com/overwatch/statistics/App.java" />
@@ -1056,7 +1059,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="62" />
+      <option name="time" value="64" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1287,7 +1290,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/model/Champion.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/logic/Logic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -1310,10 +1313,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/gameround/logic/Logic.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/event/EventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+ 
+        <state relative-caret-position="462">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+ 
         </state>
       </provider>
     </entry>
@@ -1356,7 +1361,8 @@
         <state relative-caret-position="418">
           <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#initializeReader#0;class#ui#0" />
+ 
           </folding>
         </state>
       </provider>

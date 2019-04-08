@@ -26,7 +26,7 @@ public class ui {
         System.out.println("populating models");
         populateModels();
         loadData();
-        parseFile();
+        readFile();
         initializeLogic();
         computeData();
     }
@@ -36,9 +36,14 @@ public class ui {
         return lineChart.getSkillOverRoundsPlayed();
     }
 
-    protected BarChart generateBarChart() {
+    protected BarChart generateBarChart(String role) {
         ChartRenderer barChart = new ChartRenderer(gameRounds);
         return barChart.getSupportWinRateByMap(championRoster.getChampions(), maps.getMaps());
+    }
+
+    public BarChart generateBarChartNEW(String role) {
+        ChartRenderer barChart = new ChartRenderer(gameRounds);
+        return barChart.getSupportWinRateByMap(championRoster.getChampionsByRole(role), maps.getMaps());
     }
 
     private void initializeReader() {
@@ -62,7 +67,7 @@ public class ui {
         excelReader.setChampions(championRoster.getChampions());
     }
 
-    private void parseFile() {
+    private void readFile() {
         excelReader.readWorkbook();
         gameRounds = excelReader.getGameRounds();
     }
@@ -77,4 +82,4 @@ public class ui {
         logic.calculateWinRates(championRoster.getChampions(), maps.getMaps(), gameRounds);
     }
 
-  }
+}
