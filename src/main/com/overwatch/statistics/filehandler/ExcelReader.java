@@ -93,9 +93,6 @@ public class ExcelReader {
                     case 5: // Date
                         gameRounds.get(rowIndex).setDate(text);
                         break;
-                    case 6: // Music or Game Audio
-                        gameRounds.get(rowIndex).setAudioType(text);
-                        break;
                 }
             }
         }
