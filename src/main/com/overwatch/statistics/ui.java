@@ -36,7 +36,7 @@ public class ui {
         return lineChart.getSkillOverRoundsPlayed();
     }
 
-    protected BarChart generateBarChart() {
+    protected BarChart generateBarChart(String role) {
         ChartRenderer barChart = new ChartRenderer(gameRounds);
         return barChart.getSupportWinRateByMap(championRoster.getChampions(), maps.getMaps());
     }
