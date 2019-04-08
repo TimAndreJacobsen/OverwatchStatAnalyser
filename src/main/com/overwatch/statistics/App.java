@@ -1,11 +1,13 @@
 package com.overwatch.statistics;
 
 import javafx.application.Application;
+import javafx.event.Event;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -14,7 +16,6 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     private static ui ui = new ui();
-
     public static void main(String[] args ) {
         launch(args);
     }
@@ -50,8 +51,22 @@ public class App extends Application {
         buttonShowBarChart.setText("Support win rate by map");
         buttonShowBarChart.setOnAction(event -> renderBarChart(root));
 
+        ComboBox roleSelectionComboBox = new ComboBox();
+        roleSelectionComboBox.getItems().addAll(
+                "Support",
+                "Tank",
+                "DPS",
+                "All Roles"
+        );
+        roleSelectionComboBox.setPromptText("Champion Role");
+        roleSelectionComboBox.setEditable(true);
+        roleSelectionComboBox.setOnAction((Event ev) -> {
+            String roleSelected =  roleSelectionComboBox.getSelectionModel().getSelectedItem().toString();
+        });
+        roleSelectionComboBox.setValue("Pick a role");
+        
         // Add all elements to HXBox - Top of screen
-        hbox.getChildren().addAll(buttonShowLineChart, buttonShowBarChart);
+        hbox.getChildren().addAll(roleSelectionComboBox, buttonShowLineChart, buttonShowBarChart);
 
         return hbox;
     }
