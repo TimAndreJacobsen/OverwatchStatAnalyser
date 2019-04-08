@@ -42,12 +42,11 @@
       <file leaf-file-name="ChartRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+            <state relative-caret-position="264">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#453#454#0" expanded="true" />
-                <element signature="method#getSkillOverRoundsPlayed#0;class#ChartRenderer#0" />
               </folding>
             </state>
           </provider>
@@ -78,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="409">
-              <caret line="45" column="41" lean-forward="true" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+              <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
               <folding>
                 <element signature="method#run#0;class#ui#0" />
                 <element signature="method#generateLineChart#0;class#ui#0" />
@@ -1366,7 +1365,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/ui.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
-          <caret line="45" column="41" lean-forward="true" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+          <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
           <folding>
             <element signature="method#run#0;class#ui#0" />
             <element signature="method#generateLineChart#0;class#ui#0" />
@@ -1382,12 +1381,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/overwatch/statistics/graphics/ChartRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+        <state relative-caret-position="264">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
             <element signature="e#409#410#0" expanded="true" />
             <element signature="e#453#454#0" expanded="true" />
-            <element signature="method#getSkillOverRoundsPlayed#0;class#ChartRenderer#0" />
           </folding>
         </state>
       </provider>

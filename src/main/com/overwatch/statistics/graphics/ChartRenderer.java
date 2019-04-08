@@ -16,10 +16,8 @@ public class ChartRenderer {
     public ChartRenderer(List<GameRound> gameRounds) {
         this.gameRounds = gameRounds;
     }
-
-    //TODO: Create overloaded methods to be able to generate charts for all possible values?
-    //TODO: Or possible to create a general function that accepts configuration params
-    public LineChart<String, Number> getSkillOverRoundsPlayed() {
+    
+    public LineChart<String, Number> renderSkillRating() {
         // initializing and labeling the X and Y axis
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Time ->");
@@ -47,7 +45,7 @@ public class ChartRenderer {
         return chart;
     }
 
-    public BarChart getSupportWinRateByMap(Set<Champion> champions, Set<Map> maps) {
+    public BarChart renderBarChart(Set<Champion> champions, Set<Map> maps) {
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Map Name");
         NumberAxis yAxis = new NumberAxis();
