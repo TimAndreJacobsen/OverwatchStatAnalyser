@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     private static ui ui = new ui();
+    private String role;
     public static void main(String[] args ) {
         launch(args);
     }
@@ -51,6 +52,7 @@ public class App extends Application {
         buttonShowBarChart.setText("Support win rate by map");
         buttonShowBarChart.setOnAction(event -> renderBarChart(root));
 
+        // Dropdown 1 - ComboBox - Role selection
         ComboBox roleSelectionComboBox = new ComboBox();
         roleSelectionComboBox.getItems().addAll(
                 "Support",
@@ -61,10 +63,11 @@ public class App extends Application {
         roleSelectionComboBox.setPromptText("Champion Role");
         roleSelectionComboBox.setEditable(true);
         roleSelectionComboBox.setOnAction((Event ev) -> {
-            String roleSelected =  roleSelectionComboBox.getSelectionModel().getSelectedItem().toString();
+            role =  roleSelectionComboBox.getSelectionModel().getSelectedItem().toString();
         });
         roleSelectionComboBox.setValue("Pick a role");
-        
+
+
         // Add all elements to HXBox - Top of screen
         hbox.getChildren().addAll(roleSelectionComboBox, buttonShowLineChart, buttonShowBarChart);
 
@@ -77,7 +80,12 @@ public class App extends Application {
     }
 
     private void renderBarChart(BorderPane root) {
-        BarChart barChart = ui.generateBarChart();
+        BarChart barChart = ui.generateBarChart("All Roles");
+        root.setCenter(barChart);
+    }
+
+    private void renderBarChartOnSelection(BorderPane root, String role) {
+        BarChart barChart = ui.generateBarChart(role);
         root.setCenter(barChart);
     }
 
